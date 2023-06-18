@@ -116,8 +116,8 @@
         </p>
         <div class="hero-btns">
           <a href="#projects" class="btn-blue"><i class="fas fa-code"></i> Projects</a>
-          <a href="https://dataspiral.blog" class="btn-blue-outline mx-1" id="projects-btn" target="_blank"
-            aria-label="Visit Data Spiral Blog."><i class="fas fa-book"></i> Blog</a>
+          <!-- <a href="https://dataspiral.blog" class="btn-blue-outline mx-1" id="projects-btn" target="_blank"
+            aria-label="Visit Data Spiral Blog."><i class="fas fa-book"></i> Blog</a> -->
         </div>
       </div>
     </div>
@@ -200,7 +200,7 @@
           <img src="./img/SNAP.svg" alt="SNAP Assessment, Musical Universe" width="497" height="350">
         </div>
         <div class="project-right">
-          <h3>SNAP (Screening for Neuropsychology and Psychiatry)</h3>
+          <h3>SNaP (Screening for Neuropsychology and Psychiatry)</h3>
           <ul class="tech-stack-list">
             <p class="text-dark-grey"><b>Made with: </b></p>
 
@@ -215,13 +215,13 @@
           </ul>
           <p align="justify">A state of the art
             musical screening assessment that takes only 15 minutes to complete and
-            outperforms gold standard assessments widely used by psychologists and psychiatrists across 15+ mental
+            outperforms gold standard assessments widely used by healthcare providers across 15+ mental
             health conditions.
             Predictions are made using an Imbalanced Random Forest classifier that was trained on an imbalanced binary
             prediction problem and optimized for the F1 weighted statistic. <br><br>
             The backend API is written in Python and built with the FastAPI framework. It is deployed as a Docker
-            container on AWS Lambda. The API connects to a DynamoDB database. The frontend was built with JavaScript and
-            the Svelte Kit framework. The app is containerized and deployed with GitHub Actions on the AWS App Runner
+            container on AWS Lambda. The API connects to a DynamoDB database. The frontend was built with the Svelte Kit
+            framework. The app is containerized and deployed with GitHub Actions on the AWS App Runner
             for scalability. Data drift and model performance are monitored using DynamoDB streams, which feeds the data
             into
             the processing pipeline whose results are visualized with AWS Quicksight. The CI/CD pipeline is built with
@@ -285,11 +285,11 @@
         <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
       </svg>
     </div>
+
     <div class="container" data-aos="fade-in">
       <h2 class="text-white main-font">My <span class="text-blue main-font">Skills</span></h2>
-      <ul class="skills-icons">
-
-
+      <ul id="skills-list" class="skills-icons">
+        <!-- your li elements here -->
         <li><span class="iconify" data-icon="logos:python" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Python</span></li>
         <li><span class="iconify" data-icon="logos:go" data-inline="false" data-width="90px"
@@ -300,18 +300,31 @@
             data-height="90px"></span><span>Rust</span></li>
         <li><span class="iconify" data-icon="logos:javascript" data-inline="false" data-width="90px"
             data-height="90px"></span><span>JavaScript</span></li>
+        <li><span class="iconify" data-icon="ep:data-line" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Data Science 360&#9675</span></li>
+        <li><span class="iconify" data-icon="carbon:data-class" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Software Architecture</span></li>
+        <li><span class="iconify" data-icon="ri:stock-fill" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Algotrading</span></li>
+        <li><span class="iconify" data-icon="flat-color-icons:data-protection" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Data Ethics and Fairness</span></li>
+        <li><span class="iconify" data-icon="ic:round-psychology" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Psychology</span></li>
+        <li><span class="iconify" data-icon="iconoir:agile" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Agile</span></li>
         <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Pandas</span></li>
         <li><span class="iconify" data-icon="logos:numpy" data-inline="false" data-width="90px"
             data-height="90px"></span><span>NumPy</span></li>
-        <li><span class="iconify" data-icon="logos:matplotlib-icon" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Matplotlib</span></li>
-        <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Scikit-Learn</span></li>
         <li><span class="iconify" data-icon="logos:tensorflow" data-inline="false" data-width="90px"
             data-height="90px"></span><span>TensorFlow</span></li>
+
         <li><span class="iconify" data-icon="logos:pytorch-icon" data-inline="false" data-width="90px"
             data-height="90px"></span><span>PyTorch</span></li>
+        <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Scikit-Learn</span></li>
+        <li><span class="iconify" data-icon="logos:matplotlib-icon" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Matplotlib</span></li>
         <li><span class="iconify" data-icon="ion:rocket-outline" data-inline="false" data-width="90px"
             data-height="90px"></span><span>PyMC3</span></li>
         <li><span class="iconify aws-logo" data-icon="logos:aws" data-inline="false" data-width="90px"
@@ -334,17 +347,40 @@
             data-height="90px"></span><span>MySQL</span></li>
         <li><span class="iconify" data-icon="flat-color-icons:linux" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Linux</span></li>
-        <li><span class="iconify" data-icon="ic:round-psychology" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Psychology</span></li>
         <li><span class="iconify" data-icon="ic:baseline-assessment" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Psychometrics</span></li>
-        <li><span class="iconify" data-icon="ri:stock-fill" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Algotrading</span></li>
-        <li><span class="iconify" data-icon="flat-color-icons:data-protection" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Data Ethics and Fairness</span></li>
 
       </ul>
+      <div class="centered-container">
+        <button id="show-more-btn" class="btn-blue-outline btn-large mx-1">Show More</button>
+      </div>
+      <style>
+        .centered-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+        }
+
+        #skills-list li:nth-child(n+15) {
+          visibility: hidden;
+          height: 0;
+          overflow: hidden;
+        }
+
+        #skills-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+
+        #skills-list li {
+          flex: 1 0 auto;
+          text-align: center;
+        }
+      </style>
     </div>
+
 
     <div class="seperator-skew-bottom">
       <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
@@ -402,7 +438,7 @@
 
 
       <body>
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <div class="circle">
             <img src="./img/heraclitus.webp" alt="Heraclitus">
             <div class="name">Heraclitus</div>
@@ -438,13 +474,6 @@
           </div>
         </div>
       </body>
-
-
-
-
-
-
-
   </section>
 
 
@@ -585,7 +614,20 @@
 
 
   <script>
-    AOS.init();
+    AOS.init()
+    $(document).ready(function () {
+      $("#show-more-btn").on("click", function () {
+        if ($("#show-more-btn").text() == 'Show More') {
+          $("#skills-list li:nth-child(n+15)").css({ visibility: "visible", height: "auto" })
+          $(this).text('Show Less')
+        } else {
+          $("#skills-list li:nth-child(n+15)").css({ visibility: "hidden", height: "0" })
+          $(this).text('Show More')
+        }
+      })
+    });
+
+
   </script>
 
 </body>
