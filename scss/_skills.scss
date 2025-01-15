@@ -89,3 +89,39 @@
     }
   }
 }
+
+.skills-category {
+  margin-bottom: 1rem;
+}
+
+.category-toggle {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1.25rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category-toggle:hover {
+  background-color: #2a69cc;
+}
+
+.skills-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.skills-list li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}

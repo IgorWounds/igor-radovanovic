@@ -1,100 +1,302 @@
 .projects {
-  background: white;
-  padding: 3rem 0;
+  background: $color-white; /* Set background to white */
+  padding: 2rem 0; /* Add spacing */
+
   h2 {
     text-align: center;
-    margin-bottom: 3rem;
+    color: $color-dark-grey; /* Dark grey for text */
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  scroll-snap-type: x mandatory;
+  padding: 2rem;
+  scroll-behavior: smooth;
+
+  .carousel-item {
+    flex: 0 0 calc(50% - 1rem); /* Show two items side by side */
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px); /* Slight hover effect */
+    }
+  }
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 2rem 0;
+  scroll-behavior: smooth;
+  // display: flex;
+  // justify-content: center;
+  // margin-top: 1rem;
+
+  // overflow-x: auto;
+  // gap: 1.5rem;
+  // scroll-snap-type: x mandatory;
+  // padding: 2rem;
+  .indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    background: $color-light-grey;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &.active {
+      background: $color-blue;
+    }
   }
 
-  .project-row {
+  .carousel-item {
+    flex: 0 0 calc(50% - 1rem); /* Two cards side by side */
+    scroll-snap-align: center;
+    background: $color-light-grey; /* Light grey card background */
+    border-radius: 10px;
+    box-shadow: $box-shadow; /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
     display: flex;
-    margin-bottom: 3rem;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px; /* Consistent height */
+    padding: 1rem;
 
-    .project-left {
-      width: 50%;
-      margin-right: 2rem;
-      img {
-        width: 100%;
-        border: 1px solid lightgray;
-      }
+    &:hover {
+      transform: translateY(-5px); /* Lift on hover */
     }
-    .project-right {
-      width: 50%;
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensure images fit without distortion */
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .carousel-item {
+  flex: 0 0 80%; /* Ensure one item fits neatly in view */
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+}
+
+.carousel-item:hover {
+  transform: translateY(-10px); /* Add a hover effect for interactivity */
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* Adds spacing above the indicators */
+  gap: 0.5rem; /* Adds spacing between indicators */
+}
+
+.carousel-indicators .indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc; /* Default color */
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .indicator.active {
+  background-color: #3b82f6; /* Active indicator color */
+}
+
+
+
+    .project-content {
+      flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      text-align: center;
 
       h3 {
+        margin: 1rem 0;
+        color: $color-dark-grey;
         font-size: 1.25rem;
       }
 
-      .tech-stack-list {
-        display: flex;
-        flex-wrap: wrap;
-        list-style-type: none;
+      p {
+        font-size: 1rem;
+        color: $color-dark-grey;
+        line-height: 1.5;
+        margin-bottom: 1rem; /* Add spacing from buttons */
+      }
+
+      a {
         margin-top: 1rem;
+      }
+
+      .extra-text {
+    display: none; /* Initially hidden */
+    color: $color-dark-grey;
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+
+
+
+
+
+  .read-more-btn {
+    background: $color-blue;
+    color: $color-white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: lighten($color-blue, 10%);
+    }
+  }
+      
+    }
+  }
+}
+
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center align icons */
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+
+  p {
+    width: 100%; /* Ensure label spans full width */
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: $color-dark-grey;
+    font-size: 1rem;
+  }
+
+  li {
+    margin: 0.5rem; /* Add space between icons */
+    font-size: 1.5rem;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.project-links {
+  display: flex;
+  justify-content: center; /* Center align buttons */
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  gap: 0.5rem; /* Spacing between buttons */
+  margin-top: 1rem;
+
+  a,
+  .read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &.btn-blue {
+      background: $color-blue;
+      color: $color-white;
+
+      &:hover {
+        background: lighten($color-blue, 10%);
+      }
+    }
+
+    &.btn-blue-outline {
+      border: 1px solid $color-blue;
+      color: $color-blue;
+
+      &:hover {
+        background: $color-blue;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .project-links {
+    flex-direction: column;
+    align-items: center;
+
+    a,
+    .read-more-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    flex: 0 0 100%; /* Show one card per view on smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    gap: 1rem; /* Reduce spacing between cards */
+
+    .carousel-item {
+      flex: 0 0 100%; /* Show one card per view */
+      min-height: auto; /* Allow height to adjust naturally */
+      padding: 1rem; /* Adjust padding for smaller screens */
+
+      img {
+        max-height: 200px; /* Constrain image size */
+        aspect-ratio: auto; /* Maintain aspect ratio */
+      }
+
+      .project-content {
+        h3 {
+          font-size: 1.25rem; /* Slightly smaller header */
+        }
 
         p {
-          margin-right: 1rem;
+          font-size: 1rem; /* Adjust text size for readability */
+          line-height: 1.4; /* Improve spacing for small screens */
         }
 
-        li {
-          margin-right: 20px;
-          font-size: 1.5rem;
+        a {
+          font-size: 0.875rem; /* Make buttons smaller */
         }
       }
-
-      .project-links {
-        margin-top: 1rem;
-      }
     }
-
-    #webscraper {
-      background-image: url("../img/top10songs.JPG");
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      // Background image transition only supported in Chrome, Opera, and Safari. Not firefox.
-      -webkit-transition: background-image 0.2s ease-in-out;
-      transition: background-image 0.2s ease-in-out;
-    }
-
-    #webscraper:hover {
-      background-image: url("../img/top10songs.gif");
-    }
-  }
-}
-
-@media screen and (max-width: 860px) {
-  .projects {
-    .project-row {
-      display: flex;
-      margin-bottom: 3rem;
-      flex-direction: column;
-      .project-left {
-        width: 100%;
-        // max-height: 400px;
-      }
-      .project-right {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .project-left {
-    min-height: 200px;
-  }
-}
-
-@media screen and (min-width: 501px) and (max-width: 700px) {
-  .project-left {
-    min-height: 300px;
-  }
-}
-
-@media screen and (min-width: 701px) and (max-width: 859px) {
-  .project-left {
-    min-height: 350px;
   }
 }

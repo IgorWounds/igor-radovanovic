@@ -1,6 +1,16 @@
+// Layout Variables
 $website-width: 1200px;
-$color-blue: #3b82f6;
-$dark-grey: #181a1b;
-$text-color: white;
-$text-light: #dcdcdc;
 
+// Colors
+$color-blue: #4a90e2; // Primary Blue
+$color-green: #34d399; // Secondary Accent Green
+$color-dark-grey: #1f2937; // Dark Background
+$color-light-grey: #d1d5db; // Light Text
+$color-white: #ffffff; // Pure White
+
+// Typography
+$text-color: $color-light-grey;
+$text-light: $color-light-grey;
+
+// Box Shadows (optional for buttons/cards)
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

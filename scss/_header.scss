@@ -1,8 +1,25 @@
 header {
-  background: $dark-grey;
+
+  background: $color-dark-grey;
   background-size: cover;
   min-height: 80vh;
   position: relative;
+
+  .hero {
+    h1 {
+      color: $color-blue; // Primary blue for the header text
+    }
+
+    p {
+      color: $color-light-grey; // Light grey for readability
+      .blue-link-underline {
+        color: $color-green; // Secondary green for links
+        &:hover {
+          color: lighten($color-green, 10%); // Hover effect for links
+        }
+      }
+    }
+  }
 
   #particles-js {
     height: 80vh;
@@ -233,6 +250,37 @@ header {
     }
   }
 
+  .dynamic-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Scale dynamically */
+  text-align: center;
+  color: $color-green;
+
+  span {
+    animation: fadeIn 6s infinite;
+    margin: 0 0.5rem; /* Add spacing for better alignment */
+    display: inline-block; /* Ensure proper wrapping */
+  }
+
+  @keyframes fadeIn {
+    0%, 20% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    40%, 80% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+}
+
   .seperator-skew {
     position: absolute;
     bottom: 0;
@@ -270,6 +318,16 @@ header {
 
     .socials {
       display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dynamic-text {
+    flex-direction: column; /* Stack vertically on small screens */
+    font-size: 1rem; /* Adjust font size */
+    span {
+      margin: 0.5rem 0; /* Add vertical spacing */
     }
   }
 }

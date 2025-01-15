@@ -1,5 +1,5 @@
 .footer {
-  background: $dark-grey;
+  background: $color-dark-grey;
   padding: 1.5rem 0;
   color: white;
 
@@ -29,6 +29,14 @@
       border: 3px solid $color-blue;
     }
 
+    .footer-description {
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
     .footer-icon-links a {
       margin-left: 2rem;
       transition: 0.3s;
@@ -45,6 +53,8 @@
     }
   }
 }
+
+
 
 @media screen and (max-width: 500px) {
   .footer {

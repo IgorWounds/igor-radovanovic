@@ -67,7 +67,7 @@
               <a href="#influences" class="link"><i class="fa-solid fa-book"></i> Influenced By</a>
             </li>
             <li>
-              <a href="#certificates" class="link"><i class="fas fa-user-graduate"></i> Certificates</a>
+              <a href="#certificates" class="link"><i class="fas fa-user-graduate"></i> Achievements</a>
             </li>
             <li>
               <a href="#contact" class="link"><i class="fas fa-envelope"></i> Contact</a>
@@ -98,28 +98,27 @@
 
     <!-- HERO -->
     <div class="hero">
-      <div data-aos="fade-up">
-        <h1 class="h1">
-
-          <!-- <span class="typed-text"></span><span class="cursor">&nbsp;</span> -->
-          Hi, I'm <span class="main-font text-blue">Igor</span>
-        </h1>
-        <p class="student" id="student">
-          I'm a Software Engineering Team Lead at
-          <a href="https://www.openbb.co/" class="blue-link-underline" target="_blank"
-            aria-label="Visit OpenBB to learn more.">OpenBB</a>, an Instructor and
-          Writer for <a href="https://algotrading101.com" class="blue-link-underline" target="_blank"
-            aria-label="Visit Algotrading101 to read more."> Algotrading101</a>, and the 
-          Co-Founder of <a href="https://neurobeats.ai" class="blue-link-underline" target="_blank"
-            aria-label="Visit Neurobeats to learn more.">Neurobeats</a>. 
-        </p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn-blue"><i class="fas fa-code"></i> Projects</a>
-          <!-- <a href="https://dataspiral.blog" class="btn-blue-outline mx-1" id="projects-btn" target="_blank"
-            aria-label="Visit Data Spiral Blog."><i class="fas fa-book"></i> Blog</a> -->
-        </div>
-      </div>
+  <div data-aos="fade-up">
+    <h1 class="h1">
+      Hi, I'm <span class="main-font text-blue">Igor</span>
+    </h1>
+    <h2 class="dynamic-text">
+      <span>Engineering Team Lead</span>
+      <span>AI Innovator</span>
+      <span>Data Scientist</span>
+    </h2>
+    <p class="current-role" id="current-role">
+      Currently a <strong>Engineering Team Lead</strong> at
+      <a href="https://www.openbb.co/" class="blue-link-underline" target="_blank" aria-label="Visit OpenBB.">
+        OpenBB
+      </a>, solving complex financial problems with AI and innovative engineering.
+    </p>
+    
+    <div class="hero-btns">
+      <a href="#projects" class="btn-blue"><i class="fas fa-code"></i> Projects</a>
     </div>
+  </div>
+</div>
 
     <!-- SOCIAL LINKS -->
     <div class="socials" data-aos="fade-in">
@@ -146,18 +145,66 @@
   </header>
 
   <!-- PROJECTS -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="main-font">My<span class="text-blue main-font"> Projects</span></h2>
-      <div class="project-row" data-aos="fade-up">
-        <div class="project-left">
-          <!-- adjust size on phones -->
-          <img src="./img/plato.webp" alt="Plato, Greek Philosopher" style="width:auto; height:500px" height="500"
-            align="right">
-        </div>
-        <div class="project-right">
-          <h3>Speaking with Plato</h3>
-          <ul class="tech-stack-list">
+<section id="projects" class="projects">
+  <div class="container">
+    <h2 class="main-font">My<span class="text-blue main-font"> Projects</span></h2>
+    <div id="projects-carousel" class="carousel" style="overflow-x: scroll; scroll-snap-type: x mandatory; display: flex; gap: 1rem;">
+
+
+      <div class="carousel-item">
+        <div class="project">
+          <img src="./img/ChatGPT-3.webp" alt="Warren Buffet, ChatGPT-3" loading="lazy">
+  <div class="project-content">
+    <h3>Warren Buffet AI chatbot
+</h3>
+    <p class="brief-text">
+      OpenAI ChatGPT finetuned on Warren Buffet's transcripts.
+    </p>
+    <ul class="tech-stack-list">
+            <p class="text-dark-grey"><b>Made with: </b></p>
+
+            <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
+            <li><span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span></span></li>
+            <li><span class="iconify" data-icon="noto-v1:hugging-face" data-inline="false"></span></li>
+            <li><span class="iconify" data-icon="simple-icons:gradio" data-inline="false"></span></span></li>
+            <li><span class="iconify" data-icon="logos:pytorch-icon" data-inline="false"></span></li>
+            <li><span class="iconify" data-icon="logos:jupyter" data-inline="false"></span></li>
+            <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false"></span></li>
+            <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false"></span></li>
+
+          </ul>
+    
+    <p class="extra-text hidden" align="justify">
+            This project showcases how to perform speaker diarization and transcription of video interviews.
+            It also shows the process of obtaining the data, cleaning it, preprocessing it, and finetuning the model on the
+            transcripts. The project features a simple Gradio interface that allows the user to interact with the
+            full pipeline. I also explore the common pitfalls and how to avoid them.
+    </p>
+    <div class="project-links">
+    <a href="https://github.com/AlgoTrading101/AlgoTrading101-Warren-Buffett-ChatGPT?tab=readme-ov-file" class="btn-blue btn-small" target="_blank">
+        <i class="fab fa-github"></i>  Code
+      </a>
+      <a href="https://algotrading101.com/learn/warren-buffett-chatbot-chatgpt-openai/" class="btn-blue btn-small"
+              target="_blank"> <i class="fas fa-external-link-alt"></i> Article</a>
+        <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
+
+      </div>
+  </div>
+  </div>
+      </div>
+
+
+
+      <!-- Project 1 -->
+      <div class="carousel-item">
+        <div class="project">
+          <img src="./img/plato.webp" alt="Plato, Greek Philosopher" loading="lazy">
+  <div class="project-content">
+    <h3>Speaking with Plato</h3>
+    <p class="brief-text">
+      AI chatbot finetuned on Plato's works.
+    </p>
+    <ul class="tech-stack-list">
             <p class="text-dark-grey"><b>Made with: </b></p>
 
             <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
@@ -168,8 +215,9 @@
             <li><span class="iconify" data-icon="logos:seaborn-icon" data-inline="false"></span></li>
             <li><span class="iconify" data-icon="logos:tensorflow" data-inline="false"></span></li>
           </ul>
-          <p align="justify">
-            I’ve been reading philosophy since I was a kid and I’ve always wondered how awe-inspiring it would be to be
+    
+    <p class="extra-text hidden" align="justify">
+      I’ve been reading philosophy since I was a kid and I’ve always wondered how awe-inspiring it would be to be
             able to talk with philosophers from the past. How would it feel to be able to have a conversation with them?
             <br><br>
             This project explores all of Plato's works and features two deep learning models that can generate new text
@@ -183,24 +231,29 @@
             The project features a simple Tkinkter GUI that allows the user to interact with the chatbot, generate new
             text, and
             change the parameters of the models.
-          </p>
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/IgorWounds/speaking_with_plato" class="btn-blue btn-small" target="_blank"> <i
-                class="fab fa-github"></i>
-              Code</a>
-          </div>
-        </div>
+    </p>
+    <div class="project-links">
+    <a href="https://github.com/IgorWounds/speaking_with_plato" class="btn-blue btn-small" target="_blank">
+        <i class="fab fa-github"></i>  Code
+      </a>
+        <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
+
       </div>
+  </div>
+  </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="carousel-item">
+        <div class="project">
+          <img src="./img/SNAP.svg" alt="SNAP Assessment, Musical Universe" loading="lazy">
 
-
-      <div class="project-row" data-aos="fade-up">
-        <div class="project-left">
-          <img src="./img/SNAP.svg" alt="SNAP Assessment, Musical Universe" width="497" height="350">
-        </div>
-        <div class="project-right">
-          <h3>SNaP (Screening for Neuropsychology and Psychiatry)</h3>
-          <ul class="tech-stack-list">
+          
+          <div class="project-content">
+    <h3>SNaP</h3>
+    <p class="brief-text">
+      Screening for Neurology and Psychiatry (SNaP) tool outperforming gold-standard screeners.
+    </p>
+    <ul class="tech-stack-list">
             <p class="text-dark-grey"><b>Made with: </b></p>
 
             <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
@@ -212,7 +265,9 @@
             <li><span class="iconify" data-icon="logos:javascript" data-inline="false"></span></li>
             <li><span class="iconify" data-icon="logos:svelte-icon" data-inline="false"></span></li>
           </ul>
-          <p align="justify">A state of the art
+          
+    <p class="extra-text hidden" align="justify">
+            A state of the art
             musical screening assessment that takes only 15 minutes to complete and
             outperforms gold standard assessments widely used by healthcare providers across 15+ mental
             health conditions.
@@ -225,34 +280,37 @@
             into
             the processing pipeline whose results are visualized with AWS Quicksight. The CI/CD pipeline is built with
             GitHub Actions and the AWS CDK.
-            <br><br>
-            <b>Disclaimer:</b> I didn't code the frontend.
-          </p>
-          </p>
-          <div class="project-links">
-            <a href="mailto:igorradovanovic20@gmail.com" class="btn-blue-outline btn-small mx-1" target="_blank"> <i
-                class="fas fa-external-link-alt"></i>
-              Invite only</a>
-            <!-- <a href="https://" class="btn-blue-outline btn-small mx-1" target="_blank"> <i
-                class="fas fa-external-link-alt"></i> Research</a> -->
+    </p>
+    <div class="project-links">
+            <a href="mailto:igorradovanovic20@gmail.com" class="btn-blue btn-small" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Invite Only
+                  </a>
+              <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
+
           </div>
         </div>
-      </div>
+      </div>       
+    </div>
 
-      <div class="project-row" data-aos="fade-up">
-        <div class="project-left">
-          <img src="./img/cluster.webp" alt="S&P 500 Cointegrated Pairs for Pairs Trading">
-        </div>
-        <div class="project-right">
-          <h3>Cluster Analysis for Pairs Trading</h3>
-          <ul class="tech-stack-list">
+    <div class="carousel-item">
+        <div class="project">
+          <img src="./img/cluster.webp" alt="S&P 500 Cointegrated Pairs for Pairs Trading" loading="lazy">
+
+          <div class="project-content">
+    <h3>Cluster Analysis for Pairs Trading</h3>
+    <p class="brief-text">
+      Pairs trading is a strategy in which a trader buys one asset while shorting another.
+    </p>
+    <ul class="tech-stack-list">
             <p class="text-dark-grey"><b>Made with: </b></p>
+
             <li><span class="iconify" data-icon="logos:python"></span></li>
             <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false"></span></li>
             <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false"></span></li>
             <li><span class="iconify" data-icon="logos:matplotlib-icon" data-inline="false"></span></li>
           </ul>
-          <p align="justify">Pairs trading is a strategy in which a trader buys one asset while shorting another.
+    
+    <p class="extra-text hidden" align="justify">
             The main premise of the trade is that if the two pairs diverge, they will almost
             certainly converge again, resulting in profit for the trader. As a result, the strategy requires
             cointegrated pairs to function, making it a clustering unsupervised machine learning problem. <br><br> I
@@ -261,20 +319,27 @@
             preprocessed them for the clustering algorithm. Several clustering algorithms were employed and evaluated.
             The best performing algorithm was chosen based on the silhouette score, and the cointegration test was run
             on the given clusters to extract the cointegrated pairs. A TSNE algorithm was used to visualize the pairs.
-
-          </p>
-          <div class="project-links">
+    </p>
+    <div class="project-links">
             <a href="https://algotrading101.com/learn/cluster-analysis-guide/" class="btn-blue btn-small"
               target="_blank"> <i class="fas fa-external-link-alt"></i> Article</a>
             <a href="https://github.com/IgorWounds/Cluster-Analysis-Machine-Learning-for-Pairs-Trading"
-              class="btn-blue-outline btn-small mx-1" target="_blank"> <i class="fab fa-github"></i> Code</a>
+              class="btn-blue btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
+              <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
 
           </div>
         </div>
       </div>
 
+      
+
+
     </div>
-  </section>
+
+
+</section>
+
+
 
   <!-- SKILLS -->
   <section id="skills" class="skills">
@@ -297,6 +362,24 @@
             data-height="90px"></span><span>R</span></li>
         <li><span class="iconify" data-icon="logos:javascript" data-inline="false" data-width="90px"
             data-height="90px"></span><span>JavaScript</span></li>
+
+        
+        <li><span class="iconify" data-icon="logos:tensorflow" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>TensorFlow</span></li>
+        <li><span class="iconify" data-icon="logos:pytorch-icon" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>PyTorch</span></li>
+        
+        <li><span class="iconify" data-icon="simple-icons:fastapi" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>FastAPI</span></li>
+        <li><span class="iconify" data-icon="logos:docker-icon" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Docker</span></li>
+            <li><span class="iconify" data-icon="simple-icons:ray" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Ray</span></li>
+        <li><span class="iconify" data-icon="logos:terraform" data-inline="false" data-width="90px"
+            data-height="90px"></span><span>Terraform</span></li>
+        <li><span class="iconify aws-logo" data-icon="logos:aws" data-inline="false" data-width="90px"
+            data-height="90px"></span><span class="text-center">Amazon Web <br> Services</span></li>
+
         <li><span class="iconify" data-icon="ep:data-line" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Data Science 360&#9675</span></li>
         <li><span class="iconify" data-icon="carbon:data-class" data-inline="false" data-width="90px"
@@ -313,39 +396,23 @@
             data-height="90px"></span><span>Pandas</span></li>
         <li><span class="iconify" data-icon="logos:numpy" data-inline="false" data-width="90px"
             data-height="90px"></span><span>NumPy</span></li>
-        <li><span class="iconify" data-icon="logos:tensorflow" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>TensorFlow</span></li>
-
-        <li><span class="iconify" data-icon="logos:pytorch-icon" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>PyTorch</span></li>
+        
         <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Scikit-Learn</span></li>
         <li><span class="iconify" data-icon="logos:matplotlib-icon" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Matplotlib</span></li>
         <li><span class="iconify" data-icon="ion:rocket-outline" data-inline="false" data-width="90px"
             data-height="90px"></span><span>PyMC3</span></li>
-        <li><span class="iconify aws-logo" data-icon="logos:aws" data-inline="false" data-width="90px"
-            data-height="90px"></span><span class="text-center">Amazon Web <br> Services</span></li>
-        <li><span class="iconify" data-icon="simple-icons:fastapi" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>FastAPI</span></li>
-        <li><span class="iconify" data-icon="logos:docker-icon" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Docker</span></li>
-        <li><span class="iconify" data-icon="logos:serverless" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Serverless</span></li>
+        
+        
         <li><span class="iconify" data-icon="logos:kubernetes" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Kubernetes</span></li>
         <li><span class="iconify" data-icon="logos:git-icon" data-inline="false" data-width="90px"
             data-height="90px"></span><span>Git</span></li>
-        <li><span class="iconify" data-icon="logos:tableau-icon" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Tableau</span></li>
         <li><span class="iconify" data-icon="akar-icons:github-fill" data-inline="false" data-width="90px"
             data-height="90px"></span><span>GitHub</span></li>
         <li><span class="iconify" data-icon="logos:mysql" data-inline="false" data-width="90px"
             data-height="90px"></span><span>MySQL</span></li>
-        <li><span class="iconify" data-icon="flat-color-icons:linux" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Linux</span></li>
-        <li><span class="iconify" data-icon="ic:baseline-assessment" data-inline="false" data-width="90px"
-            data-height="90px"></span><span>Psychometrics</span></li>
 
       </ul>
       <div class="centered-container">
@@ -437,34 +504,34 @@
       <body>
         <div class="row" data-aos="fade-up">
           <div class="circle">
-            <img src="./img/heraclitus.webp" alt="Heraclitus">
+            <img src="./img/heraclitus.webp" alt="Heraclitus" loading="lazy">
             <div class="name">Heraclitus</div>
             <div class="quote">"The only thing that is constant is change."</div>
           </div>
           <div class="circle">
-            <img src="./img/carl_g_jung.webp" alt="Carl Gustav Jung">
+            <img src="./img/carl_g_jung.webp" alt="Carl Gustav Jung" loading="lazy">
             <div class="name">Carl Gustav Jung</div>
             <div class="quote">"In all chaos there is a cosmos, in all disorder a secret order.
               "</div>
           </div>
           <div class="circle">
-            <img src="./img/edmund_husserl.webp" alt="Edmund Husserl">
+            <img src="./img/edmund_husserl.webp" alt="Edmund Husserl" loading="lazy">
             <div class="name">Edmund Husserl</div>
             <div class="quote">"Merely fact-minded sciences make merely fact-minded people."</div>
           </div>
           <div class="circle">
-            <img src="./img/karl_jaspers.webp" alt="Karl Jaspers">
+            <img src="./img/karl_jaspers.webp" alt="Karl Jaspers" loading="lazy">
             <div class="name">Karl Jaspers</div>
             <div class="quote">"Even truth can be deceptive, whatever its appearance."</div>
           </div>
           <div class="circle">
-            <img src="./img/albert_n_whitehead.webp" alt="Albert North Whitehead">
+            <img src="./img/albert_n_whitehead.webp" alt="Albert North Whitehead" loading="lazy">
             <div class="name">Alfred North Whitehead</div>
             <div class="quote">"...the only simplicity to be trusted is the simplicity to be found on the far side of
               complexity."</div>
           </div>
           <div class="circle">
-            <img src="./img/iain_mcgilchrist.webp" alt="Iain McGilchrist">
+            <img src="./img/iain_mcgilchrist.webp" alt="Iain McGilchrist" loading="lazy">
             <div class="name">Iain McGilchrist</div>
             <div class="quote">"Meaning emerges from engagement with the world, not from abstract contemplation of it."
             </div>
@@ -474,35 +541,58 @@
   </section>
 
 
-  <!-- certificates -->
-  <section id="certificates" class="education">
-    <div class="container">
-      <h2 class="main-font" data-aos="fade-in">My <span class="text-blue main-font">Certificates</span></h2>
+<!-- Achievements -->
+<section id="certificates" class="achievements">
+  <div class="container">
+    <h2 class="main-font" data-aos="fade-in">My <span class="text-blue main-font">Achievements</span></h2>
 
-      <div class="education-card" data-aos="zoom-in">
+    <div class="achievements-grid" data-aos="fade-up">
 
-        <div class="card-column-large">
-          <h3><a href="https://coursera.org/share/34fbf2bf1a4f336d9d8ea8ccd8b04b06" class="text-blue" target="_blank">
-              Google Data Analytics Specialization</a></h3>
-          <p>Coursera</p>
-          <ul>
-            <li>Issued March 2022</li>
-            <li>Credential ID: UP4DYDE9ZM7C</li>
-          </ul>
-        </div>
-
-        <div class="card-column-large">
-          <h3><a href="https://coursera.org/share/ef200c50887f8419e4dfbda8d3c04525" class="text-blue" target="_blank">
-              Deep Learning Specialization</a></h3>
-          <p>Coursera</p>
-          <ul>
-            <li>Issued January 2022</li>
-            <li>Credential ID: WWWA84VFXN6V</li>
-          </ul>
-        </div>
+      <div class="achievement-card">
+        <h3>
+          <a href="https://patents.google.com/patent/WO2024069292A1/en?oq=PCT%2fIB2023%2f058957" class="text-blue" target="_blank">
+            Patent on modifying health and personalizing it based on music...
+          </a>
+        </h3>
+        <p class="issuer">Chime Health Ai Inc.</p>
+        <ul>
+          <li><strong>Issued:</strong> April 2024</li>
+          <li><strong>Credential ID:</strong> PCT/IB2023/058957</li>
+        </ul>
       </div>
+
+
+      <div class="achievement-card">
+        <h3>
+          <a href="https://coursera.org/share/34fbf2bf1a4f336d9d8ea8ccd8b04b06" class="text-blue" target="_blank">
+            Google Data Analytics Specialization
+          </a>
+        </h3>
+        <p class="issuer">Coursera</p>
+        <ul>
+          <li><strong>Issued:</strong> March 2022</li>
+          <li><strong>Credential ID:</strong> UP4DYDE9ZM7C</li>
+        </ul>
+      </div>
+
+
+      <div class="achievement-card">
+        <h3>
+          <a href="https://coursera.org/share/ef200c50887f8419e4dfbda8d3c04525" class="text-blue" target="_blank">
+            Deep Learning Specialization
+          </a>
+        </h3>
+        <p class="issuer">Coursera</p>
+        <ul>
+          <li><strong>Issued:</strong> January 2022</li>
+          <li><strong>Credential ID:</strong> WWWA84VFXN6V</li>
+        </ul>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
 
   <!-- CONTACT -->
@@ -528,7 +618,7 @@
         </div>
       </div>
 
-      <form id="contact-form" data-aos="zoom-in" data-aos-delay="300" action="https://formspree.io/f/xyyvwagk"
+      <form id="contact-form" data-aos="zoom-in" data-aos-delay="300" action="https://formspree.io/f/xgvvqyqv"
         method="POST">
         <h2 class="main-font">Send <span class="text-blue main-font">Email</span></h2>
 
@@ -537,7 +627,7 @@
         </div>
 
         <div class="form-group">
-          <input type="email" id="email" name="email" placeholder="Your email" required>
+          <input type="email" id="email" name="email" placeholder="Your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address">
         </div>
 
         <div class="form-group">
@@ -569,6 +659,7 @@
     <div class="container">
       <div class="footer-flex">
         <img src="./img/logo.webp" alt="logo" width="200" height="45" id=" logo-footer">
+        <p class="footer-description">Crafting innovative AI solutions and exploring the intersection of psychology and data science. Let's connect!</p>
 
         <div class="footer-icon-links">
           <a href="https://github.com/IgorWounds" aria-label="Visit IgorWounds GitHub profile." target="_blank"><i
@@ -624,16 +715,97 @@
       })
     });
 
+    document.querySelectorAll('.read-more-btn').forEach((button) => {
+  button.addEventListener('click', () => {
+    const projectContent = button.closest('.project-content'); // Parent container
+    const extraText = projectContent.querySelector('.extra-text'); // Hidden text
+    const briefText = projectContent.querySelector('.brief-text'); // Brief text
+
+    // Toggle visibility of extra text and button text
+    if (extraText.classList.contains('hidden')) {
+      extraText.classList.remove('hidden');
+      extraText.style.display = 'block'; // Ensure it's visible
+      briefText.style.display = 'none'; // Hide the brief text
+      button.textContent = 'Read Less';
+    } else {
+      extraText.classList.add('hidden');
+      extraText.style.display = 'none'; // Ensure it's hidden
+      briefText.style.display = 'block'; // Show the brief text
+      button.textContent = 'Read More';
+    }
+  });
+});
+
+const carousel = document.querySelector('#projects-carousel');
+let scrollAmount = 0;
+const scrollStep = carousel.clientWidth / 2; // Move half the width at a time
+const intervalTime = 3000; // Time in milliseconds between scrolls
+
+function autoScrollCarousel() {
+  scrollAmount += carousel.clientWidth;
+  if (scrollAmount >= carousel.scrollWidth) {
+    scrollAmount = 0; // Reset to the beginning
+  }
+  carousel.scrollTo({
+    left: scrollAmount,
+    behavior: 'smooth',
+  });
+}
+
+
+// Start autoplay
+let autoScrollInterval = setInterval(autoScrollCarousel, 4000); // Adjust timing
+
+carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+carousel.addEventListener('mouseleave', () => {
+  autoScrollInterval = setInterval(autoScrollCarousel, 4000);
+});
+
+
+const indicators = document.querySelectorAll('.indicator');
+
+function updateIndicators() {
+  const currentIndex = Math.round(carousel.scrollLeft / carousel.clientWidth);
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentIndex);
+  });
+}
+
+
+// Update indicators as carousel scrolls
+carousel.addEventListener('scroll', updateIndicators);
+
+// Jump to specific slide when an indicator is clicked
+indicators.forEach((indicator) => {
+  indicator.addEventListener('click', () => {
+    const index = parseInt(indicator.getAttribute('data-index'), 10);
+    scrollAmount = index * scrollStep;
+    carousel.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth',
+    });
+    updateIndicators();
+  });
+});
+
+
+document.querySelector("#backToTopBtn").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 
   </script>
+
+  
 
 </body>
 
 
-<script src="https://getinsights.io/js/insights.js"></script>
+<!-- <script src="https://getinsights.io/js/insights.js"></script>
 <script>
 insights.init('IuTASD6pVlnJRt6s');
 insights.trackPages();
-</script>
+</script> -->
 
 </html>
