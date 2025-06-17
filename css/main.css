@@ -679,94 +679,42 @@ header .seperator-skew svg .fill-white {
   scroll-behavior: smooth;
 }
 .carousel .carousel-item {
-  flex: 0 0 calc(50% - 1rem); /* Show two items side by side */
-  scroll-snap-align: center;
-  transition: transform 0.3s ease;
-}
-.carousel .carousel-item:hover {
-  transform: translateY(-5px); /* Slight hover effect */
-}
-
-.carousel {
+  flex: 0 0 350px;
+  width: 350px;
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 2rem 0;
-  scroll-behavior: smooth;
+  align-items: stretch;
+  height: auto;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.carousel .indicator {
-  width: 10px;
-  height: 10px;
-  margin: 0 0.5rem;
-  border-radius: 50%;
-  background: #d1d5db;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.carousel .indicator.active {
-  background: #4a90e2;
-}
-.carousel .carousel-item {
-  flex: 0 0 calc(50% - 1rem); /* Two cards side by side */
-  scroll-snap-align: center;
-  background: #d1d5db; /* Light grey card background */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: transform 0.3s ease;
+.carousel .carousel-item .project {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(20,24,31,0.08);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 500px; /* Consistent height */
-  padding: 1rem;
+  min-height: 520px;
+  border-left: 5px solid #317EFB;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-.carousel .carousel-item:hover {
-  transform: translateY(-5px); /* Lift on hover */
-}
-.carousel .carousel-item img {
-  width: 100%;
-  aspect-ratio: 16/9; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure images fit without distortion */
-  border-radius: 8px;
+.carousel .carousel-item .project img {
+  border-radius: 12px;
   margin-bottom: 1rem;
-}
-.carousel .carousel-item .carousel-item {
-  flex: 0 0 80%; /* Ensure one item fits neatly in view */
-  scroll-snap-align: start;
-  transition: transform 0.3s ease;
-}
-.carousel .carousel-item .carousel-item img {
-  max-width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px;
-}
-.carousel .carousel-item .carousel-item:hover {
-  transform: translateY(-10px); /* Add a hover effect for interactivity */
-}
-.carousel .carousel-item .carousel-indicators {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem; /* Adds spacing above the indicators */
-  gap: 0.5rem; /* Adds spacing between indicators */
-}
-.carousel .carousel-item .carousel-indicators .indicator {
-  width: 12px;
-  height: 12px;
-  background-color: #ccc; /* Default color */
-  border-radius: 50%; /* Circular shape */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.carousel .carousel-item .carousel-indicators .indicator.active {
-  background-color: #3b82f6; /* Active indicator color */
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(49,126,251,0.07);
+  transition: box-shadow 0.2s;
 }
 .carousel .carousel-item .project-content {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
+  gap: 0.7rem;
+}
+.carousel .carousel-item .project-links {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
 }
 .carousel .carousel-item .project-content h3 {
   margin: 1rem 0;
@@ -802,6 +750,17 @@ header .seperator-skew svg .fill-white {
 }
 .carousel .carousel-item .project-content .read-more-btn:hover {
   background: #76abe9;
+}
+.carousel .carousel-item:hover, .carousel .carousel-item:focus-within {
+  transform: scale(1.035) translateY(-8px);
+  box-shadow: 0 8px 32px rgba(49,126,251,0.14), 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+.carousel .carousel-item:hover .project, .carousel .carousel-item:focus-within .project {
+  box-shadow: 0 8px 32px rgba(49,126,251,0.14), 0 2px 8px rgba(0,0,0,0.10);
+}
+.carousel .carousel-item:hover .project img, .carousel .carousel-item:focus-within .project img {
+  box-shadow: 0 4px 16px rgba(49,126,251,0.13);
 }
 
 .tech-stack-list {
@@ -969,68 +928,62 @@ header .seperator-skew svg .fill-white {
 
 .achievements-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .achievement-card {
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(20,24,31,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 5px solid #317EFB;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 220px;
 }
 
-.achievement-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+.achievement-card:hover, .achievement-card:focus-within {
+  transform: scale(1.035) translateY(-8px);
+  box-shadow: 0 8px 32px rgba(49,126,251,0.14), 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
 }
 
 .achievement-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.achievement-card a {
-  text-decoration: none;
-}
-
-.achievement-card a:hover {
-  text-decoration: underline;
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
 }
 
 .achievement-card .issuer {
-  font-size: 0.9rem;
-  color: #6c757d;
+  font-size: 1rem;
+  color: #317EFB;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .achievement-card ul {
-  list-style-type: none;
+  margin: 0.5rem 0 0 0;
   padding: 0;
-  margin: 0;
+  list-style: none;
+  font-size: 0.98rem;
 }
 
 .achievement-card ul li {
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
-.achievement-card ul li strong {
-  color: #3b82f6; /* Highlight the label */
-}
-
-.achievement-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.achievements-grid, .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+@media (max-width: 700px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .achievement-card {
+    padding: 1.2rem 1rem;
+  }
 }
 
 .skills {
@@ -1165,95 +1118,120 @@ header .seperator-skew svg .fill-white {
 }
 .contact .card-container {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  align-items: stretch;
 }
 .contact .card-container .card {
   background: #fff;
-  width: 260px;
-  margin: 20px;
-  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(20,24,31,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
-  border-radius: 3px;
+  align-items: center;
+  min-width: 220px;
+  min-height: 200px;
+  justify-content: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.contact .card-container .card:hover, .contact .card-container .card:focus-within {
+  transform: scale(1.035) translateY(-8px);
+  box-shadow: 0 8px 32px rgba(49,126,251,0.14), 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
 }
 .contact .card-container .card i {
-  font-size: 3.5rem;
-  color: #4a90e2;
-  margin-bottom: 1rem;
-  transition: 0.4s;
+  font-size: 2.2rem;
+  color: #317EFB;
+  margin-bottom: 0.7rem;
 }
-.contact .card-container .card i:hover {
-  transform: translateY(-20%);
+.contact .card-container .card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
-.contact .card-container .card > * {
-  margin: 0.5rem;
+.contact .card-container .card p, .contact .card-container .card a {
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+  word-break: break-word;
 }
+.contact .card-container .card a.text-blue {
+  color: #317EFB;
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact .card-container .card a.text-blue:hover {
+  text-decoration: underline;
+}
+
 .contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 3px;
-  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
-  padding: 2rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(20,24,31,0.08);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 500px;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 .contact form h2 {
-  text-align: center;
-  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
 }
-.contact form .form-group input {
-  margin: 0.75rem 0;
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid black;
-  padding: 0.75rem;
+.contact form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact form input, .contact form textarea {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
   font-size: 1rem;
-}
-.contact form .form-group input:focus {
-  outline: none;
-}
-.contact form .form-group textarea {
-  width: 100%;
-  border-radius: 3px;
-  margin: 0.75rem 0;
-  border: 1px solid black;
-  padding: 0.75rem;
-  font-size: 1rem;
+  background: #fafbfc;
+  transition: border 0.2s, box-shadow 0.2s;
   resize: vertical;
 }
-.contact form .form-group textarea:focus {
+.contact form input:focus, .contact form textarea:focus {
+  border: 1.5px solid #317EFB;
   outline: none;
+  box-shadow: 0 0 0 2px rgba(49,126,251,0.08);
 }
-.contact form #status {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 3px;
-  color: #00b700;
+.contact form button.btn-email {
+  background: #317EFB;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 0.5rem;
 }
-.contact form #status.success {
-  color: #00b700;
-  animation: status 4s ease forwards;
+.contact form button.btn-email:hover, .contact form button.btn-email:focus {
+  background: #245bb5;
+  transform: scale(1.04);
 }
-.contact form #status.error {
-  color: red;
-  animation: status 4s ease forwards;
-}
-@keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
+
+@media (max-width: 700px) {
+  .card-container {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
   }
-  90% {
-    opacity: 1;
-    pointer-events: all;
+  .card {
+    min-width: 0;
+    width: 90vw;
+    max-width: 350px;
   }
-  100% {
-    opacity: 0;
-    pointer-events: none;
+  #contact-form {
+    padding: 1.2rem 1rem;
   }
 }
 
@@ -1319,6 +1297,179 @@ header .seperator-skew svg .fill-white {
   }
   .footer .footer-flex .footer-icon-links a {
     margin: 0 1rem;
+  }
+}
+
+/* Sticky navbar with shadow */
+#nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(20, 24, 31, 0.85); /* dark, semi-transparent */
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Nav link hover effect */
+.nav-links .link, .mobile-menu-links .link {
+  color: #fff;
+  transition: color 0.2s, background 0.2s, border-radius 0.2s;
+}
+
+.nav-links .link:hover, .mobile-menu-links .link:hover {
+  color: #317EFB;
+  background: rgba(49,126,251,0.08);
+  border-radius: 6px;
+}
+
+/* Carousel arrow buttons - improved visibility */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(20, 24, 31, 0.95);
+  color: #fff;
+  border: 2px solid #317EFB;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 16px rgba(49,126,251,0.18), 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s, transform 0.2s, opacity 0.2s;
+  opacity: 1;
+}
+.carousel-arrow.left {
+  left: 10px;
+}
+.carousel-arrow.right {
+  right: 10px;
+}
+.carousel-arrow:hover:not(.disabled) {
+  background: #317EFB;
+  color: #fff;
+  transform: translateY(-50%) scale(1.12);
+}
+.carousel-arrow.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: default;
+}
+
+@media (max-width: 700px) {
+  .carousel-arrow {
+    display: none;
+  }
+}
+
+/* Project card hover effect */
+.carousel-item .project {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.carousel-item .project:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(49,126,251,0.12), 0 1.5px 6px rgba(0,0,0,0.08);
+}
+
+/* Ensure carousel parent is positioned for absolute arrows */
+#projects-carousel {
+  position: relative;
+}
+
+/* Hide carousel scrollbar */
+#projects-carousel {
+  overflow-x: auto !important;
+  scrollbar-width: none; /* Firefox */
+}
+#projects-carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Hide any carousel indicators */
+.carousel .indicator,
+.carousel-indicators {
+  display: none !important;
+}
+
+/* Restore horizontal scrolling for carousel */
+#projects-carousel {
+  overflow-x: auto !important;
+  scrollbar-width: none; /* Firefox */
+}
+#projects-carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Influencer cards modern style */
+.circle {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(20,24,31,0.08);
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  margin: 10px;
+  text-align: center;
+  width: 220px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 5px solid #317EFB;
+  transition: box-shadow 0.2s, transform 0.2s;
+  height: 100%;
+  box-sizing: border-box;
+}
+.circle img {
+  width: 120px;
+  height: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(49,126,251,0.07);
+  margin-bottom: 1rem;
+}
+.circle .name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+}
+.circle .quote {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #222;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+.circle:hover, .circle:focus-within {
+  transform: scale(1.045) translateY(-6px);
+  box-shadow: 0 8px 32px rgba(49,126,251,0.14), 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+
+/* Responsive influencer grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+@media (max-width: 900px) {
+  .row {
+    gap: 1rem;
+  }
+  .circle {
+    width: 90vw;
+    min-width: 0;
+    max-width: 350px;
   }
 }
 

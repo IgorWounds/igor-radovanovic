@@ -145,208 +145,208 @@
 <section id="projects" class="projects">
   <div class="container">
     <h2 class="main-font">My<span class="text-blue main-font"> Projects</span></h2>
-    <div id="projects-carousel" class="carousel" style="overflow-x: scroll; scroll-snap-type: x mandatory; display: flex; gap: 1rem;">
+    <div class="carousel-wrapper" style="position: relative;">
+      <button class="carousel-arrow left" aria-label="Scroll left">&#8592;</button>
+      <div id="projects-carousel" class="carousel" style="overflow-x: scroll; scroll-snap-type: x mandatory; display: flex; gap: 1rem;">
 
-
-      <div class="carousel-item">
-        <div class="project">
-          <img src="./img/ChatGPT-3.webp" alt="Warren Buffet, ChatGPT-3" loading="lazy">
-  <div class="project-content">
-    <h3>Warren Buffet AI chatbot
+        <div class="carousel-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="project">
+            <img src="./img/ChatGPT-3.webp" alt="Warren Buffet, ChatGPT-3" loading="lazy">
+    <div class="project-content">
+      <h3>Warren Buffet AI chatbot
 </h3>
-    <p class="brief-text">
-      OpenAI ChatGPT finetuned on Warren Buffet's transcripts.
-    </p>
-    <ul class="tech-stack-list">
-            <p class="text-dark-grey"><b>Made with: </b></p>
+      <p class="brief-text">
+        OpenAI ChatGPT finetuned on Warren Buffet's transcripts.
+      </p>
+      <ul class="tech-stack-list">
+              <p class="text-dark-grey"><b>Made with: </b></p>
 
-            <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
-            <li><span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span></span></li>
-            <li><span class="iconify" data-icon="noto-v1:hugging-face" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="simple-icons:gradio" data-inline="false"></span></span></li>
-            <li><span class="iconify" data-icon="logos:pytorch-icon" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:jupyter" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
+              <li><span class="iconify" data-icon="simple-icons:openai" data-inline="false"></span></span></li>
+              <li><span class="iconify" data-icon="noto-v1:hugging-face" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:gradio" data-inline="false"></span></span></li>
+              <li><span class="iconify" data-icon="logos:pytorch-icon" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:jupyter" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false"></span></li>
 
-          </ul>
-    
-    <p class="extra-text hidden" align="justify">
-            This project showcases how to perform speaker diarization and transcription of video interviews.
-            It also shows the process of obtaining the data, cleaning it, preprocessing it, and finetuning the model on the
-            transcripts. The project features a simple Gradio interface that allows the user to interact with the
-            full pipeline. I also explore the common pitfalls and how to avoid them.
-    </p>
-    <div class="project-links">
-    <a href="https://github.com/AlgoTrading101/AlgoTrading101-Warren-Buffett-ChatGPT?tab=readme-ov-file" class="btn-blue btn-small" target="_blank">
-        <i class="fab fa-github"></i>  Code
-      </a>
-      <a href="https://algotrading101.com/learn/warren-buffett-chatbot-chatgpt-openai/" class="btn-blue btn-small"
-              target="_blank"> <i class="fas fa-external-link-alt"></i> Article</a>
-        <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
-
-      </div>
-  </div>
-  </div>
-      </div>
-
-
-
-      <!-- Project 1 -->
-      <div class="carousel-item">
-        <div class="project">
-          <img src="./img/plato.webp" alt="Plato, Greek Philosopher" loading="lazy">
-  <div class="project-content">
-    <h3>Speaking with Plato</h3>
-    <p class="brief-text">
-      AI chatbot finetuned on Plato's works.
-    </p>
-    <ul class="tech-stack-list">
-            <p class="text-dark-grey"><b>Made with: </b></p>
-
-            <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
-            <li><span class="iconify" data-icon="noto-v1:hugging-face" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:pytorch-icon" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:jupyter" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:seaborn-icon" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:tensorflow" data-inline="false"></span></li>
-          </ul>
-    
-    <p class="extra-text hidden" align="justify">
-      I’ve been reading philosophy since I was a kid and I’ve always wondered how awe-inspiring it would be to be
-            able to talk with philosophers from the past. How would it feel to be able to have a conversation with them?
-            <br><br>
-            This project explores all of Plato's works and features two deep learning models that can generate new text
-            and
-            hold a conversation with the user. The bot that generates new text is based on a GPT-2 model, while the
-            chatbot is
-            based on dialoGPT and emulates Socrates. Both models are taken from HuggingFace's model hub and are
-            finetuned on Plato's
-            works using the Transformers library.
-            <br><br>
-            The project features a simple Tkinkter GUI that allows the user to interact with the chatbot, generate new
-            text, and
-            change the parameters of the models.
-    </p>
-    <div class="project-links">
-    <a href="https://github.com/IgorWounds/speaking_with_plato" class="btn-blue btn-small" target="_blank">
-        <i class="fab fa-github"></i>  Code
-      </a>
-        <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
-
-      </div>
-  </div>
-  </div>
-      </div>
-      <!-- Project 2 -->
-      <div class="carousel-item">
-        <div class="project">
-          <img src="./img/SNAP.svg" alt="SNAP Assessment, Musical Universe" loading="lazy">
-
-          
-          <div class="project-content">
-    <h3>SNaP</h3>
-    <p class="brief-text">
-      Screening for Neurology and Psychiatry (SNaP) tool outperforming gold-standard screeners.
-    </p>
-    <ul class="tech-stack-list">
-            <p class="text-dark-grey"><b>Made with: </b></p>
-
-            <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
-            <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="simple-icons:fastapi" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:docker-icon" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:aws" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:github-actions" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:javascript" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:svelte-icon" data-inline="false"></span></li>
-          </ul>
-          
-    <p class="extra-text hidden" align="justify">
-            A state of the art
-            musical screening assessment that takes only 15 minutes to complete and
-            outperforms gold standard assessments widely used by healthcare providers across 15+ mental
-            health conditions.
-            Predictions are made using an Imbalanced Random Forest classifier that was trained on an imbalanced binary
-            prediction problem and optimized for the F1 weighted statistic. <br><br>
-            The backend API is written in Python and built with the FastAPI framework. It is deployed as a Docker
-            container on AWS Lambda. The API connects to a DynamoDB database. The frontend was built with the Svelte Kit
-            framework. The app is containerized and deployed with GitHub Actions on the AWS App Runner
-            for scalability. Data drift and model performance are monitored using DynamoDB streams, which feeds the data
-            into
-            the processing pipeline whose results are visualized with AWS Quicksight. The CI/CD pipeline is built with
-            GitHub Actions and the AWS CDK.
-    </p>
-    <div class="project-links">
-            <a href="mailto:igorradovanovic20@gmail.com" class="btn-blue btn-small" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Invite Only
-                  </a>
-              <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
-
-          </div>
-        </div>
-      </div>       
-    </div>
-
-    <div class="carousel-item">
-        <div class="project">
-          <img src="./img/cluster.webp" alt="S&P 500 Cointegrated Pairs for Pairs Trading" loading="lazy">
-
-          <div class="project-content">
-    <h3>Cluster Analysis for Pairs Trading</h3>
-    <p class="brief-text">
-      Pairs trading is a strategy in which a trader buys one asset while shorting another.
-    </p>
-    <ul class="tech-stack-list">
-            <p class="text-dark-grey"><b>Made with: </b></p>
-
-            <li><span class="iconify" data-icon="logos:python"></span></li>
-            <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false"></span></li>
-            <li><span class="iconify" data-icon="logos:matplotlib-icon" data-inline="false"></span></li>
-          </ul>
-    
-    <p class="extra-text hidden" align="justify">
-            The main premise of the trade is that if the two pairs diverge, they will almost
-            certainly converge again, resulting in profit for the trader. As a result, the strategy requires
-            cointegrated pairs to function, making it a clustering unsupervised machine learning problem. <br><br> I
-            obtained all S&P 500 stocks from Yahoo Finance
-            and
-            preprocessed them for the clustering algorithm. Several clustering algorithms were employed and evaluated.
-            The best performing algorithm was chosen based on the silhouette score, and the cointegration test was run
-            on the given clusters to extract the cointegrated pairs. A TSNE algorithm was used to visualize the pairs.
-    </p>
-    <div class="project-links">
-            <a href="https://algotrading101.com/learn/cluster-analysis-guide/" class="btn-blue btn-small"
-              target="_blank"> <i class="fas fa-external-link-alt"></i> Article</a>
-            <a href="https://github.com/IgorWounds/Cluster-Analysis-Machine-Learning-for-Pairs-Trading"
-              class="btn-blue btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
-              <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
-
-          </div>
-        </div>
-      </div>
-
+            </ul>
       
+      <p class="extra-text hidden" align="justify">
+              This project showcases how to perform speaker diarization and transcription of video interviews.
+              It also shows the process of obtaining the data, cleaning it, preprocessing it, and finetuning the model on the
+              transcripts. The project features a simple Gradio interface that allows the user to interact with the
+              full pipeline. I also explore the common pitfalls and how to avoid them.
+      </p>
+      <div class="project-links">
+      <a href="https://github.com/AlgoTrading101/AlgoTrading101-Warren-Buffett-ChatGPT?tab=readme-ov-file" class="btn-blue btn-small" target="_blank">
+          <i class="fab fa-github"></i>  Code
+        </a>
+        <a href="https://algotrading101.com/learn/warren-buffett-chatbot-chatgpt-openai/" class="btn-blue btn-small"
+                target="_blank"> <i class="fas fa-external-link-alt"></i> Article</a>
+          <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
 
+        </div>
+    </div>
+    </div>
+        </div>
+
+
+
+        <!-- Project 1 -->
+        <div class="carousel-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="project">
+            <img src="./img/plato.webp" alt="Plato, Greek Philosopher" loading="lazy">
+    <div class="project-content">
+      <h3>Speaking with Plato</h3>
+      <p class="brief-text">
+        AI chatbot finetuned on Plato's works.
+      </p>
+      <ul class="tech-stack-list">
+              <p class="text-dark-grey"><b>Made with: </b></p>
+
+              <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
+              <li><span class="iconify" data-icon="noto-v1:hugging-face" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:pytorch-icon" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:jupyter" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:seaborn-icon" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:tensorflow" data-inline="false"></span></li>
+            </ul>
+      
+      <p class="extra-text hidden" align="justify">
+        I've been reading philosophy since I was a kid and I've always wondered how awe-inspiring it would be to be
+              able to talk with philosophers from the past. How would it feel to be able to have a conversation with them?
+              <br><br>
+              This project explores all of Plato's works and features two deep learning models that can generate new text
+              and
+              hold a conversation with the user. The bot that generates new text is based on a GPT-2 model, while the
+              chatbot is
+              based on dialoGPT and emulates Socrates. Both models are taken from HuggingFace's model hub and are
+              finetuned on Plato's
+              works using the Transformers library.
+              <br><br>
+              The project features a simple Tkinkter GUI that allows the user to interact with the chatbot, generate new
+              text, and
+              change the parameters of the models.
+      </p>
+      <div class="project-links">
+      <a href="https://github.com/IgorWounds/speaking_with_plato" class="btn-blue btn-small" target="_blank">
+          <i class="fab fa-github"></i>  Code
+        </a>
+        <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
+
+      </div>
+    </div>
+    </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="carousel-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="project">
+            <img src="./img/SNAP.svg" alt="SNAP Assessment, Musical Universe" loading="lazy">
+
+            
+            <div class="project-content">
+      <h3>SNaP</h3>
+      <p class="brief-text">
+        Screening for Neurology and Psychiatry (SNaP) tool outperforming gold-standard screeners.
+      </p>
+      <ul class="tech-stack-list">
+              <p class="text-dark-grey"><b>Made with: </b></p>
+
+              <li><span class="iconify" data-icon="logos:python" data-inline="false"></span></span></li>
+              <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:fastapi" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:docker-icon" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:aws" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:github-actions" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:javascript" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:svelte-icon" data-inline="false"></span></li>
+            </ul>
+            
+      <p class="extra-text hidden" align="justify">
+              A state of the art
+              musical screening assessment that takes only 15 minutes to complete and
+              outperforms gold standard assessments widely used by healthcare providers across 15+ mental
+              health conditions.
+              Predictions are made using an Imbalanced Random Forest classifier that was trained on an imbalanced binary
+              prediction problem and optimized for the F1 weighted statistic. <br><br>
+              The backend API is written in Python and built with the FastAPI framework. It is deployed as a Docker
+              container on AWS Lambda. The API connects to a DynamoDB database. The frontend was built with the Svelte Kit
+              framework. The app is containerized and deployed with GitHub Actions on the AWS App Runner
+              for scalability. Data drift and model performance are monitored using DynamoDB streams, which feeds the data
+              into
+              the processing pipeline whose results are visualized with AWS Quicksight. The CI/CD pipeline is built with
+              GitHub Actions and the AWS CDK.
+      </p>
+      <div class="project-links">
+              <a href="mailto:igorradovanovic20@gmail.com" class="btn-blue btn-small" target="_blank">
+                      <i class="fas fa-external-link-alt"></i> Invite Only
+                    </a>
+                <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
+
+            </div>
+          </div>
+        </div>       
+      </div>
+
+      <div class="carousel-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="project">
+            <img src="./img/cluster.webp" alt="S&P 500 Cointegrated Pairs for Pairs Trading" loading="lazy">
+
+            <div class="project-content">
+      <h3>Cluster Analysis for Pairs Trading</h3>
+      <p class="brief-text">
+        Pairs trading is a strategy in which a trader buys one asset while shorting another.
+      </p>
+      <ul class="tech-stack-list">
+              <p class="text-dark-grey"><b>Made with: </b></p>
+
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:scikitlearn" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:pandas" data-inline="false"></span></li>
+              <li><span class="iconify" data-icon="logos:matplotlib-icon" data-inline="false"></span></li>
+            </ul>
+      
+      <p class="extra-text hidden" align="justify">
+              The main premise of the trade is that if the two pairs diverge, they will almost
+              certainly converge again, resulting in profit for the trader. As a result, the strategy requires
+              cointegrated pairs to function, making it a clustering unsupervised machine learning problem. <br><br> I
+              obtained all S&P 500 stocks from Yahoo Finance
+              and
+              preprocessed them for the clustering algorithm. Several clustering algorithms were employed and evaluated.
+              The best performing algorithm was chosen based on the silhouette score, and the cointegration test was run
+              on the given clusters to extract the cointegrated pairs. A TSNE algorithm was used to visualize the pairs.
+      </p>
+      <div class="project-links">
+              <a href="https://algotrading101.com/learn/cluster-analysis-guide/" class="btn-blue btn-small"
+                target="_blank"> <i class="fas fa-external-link-alt"></i> Article</a>
+              <a href="https://github.com/IgorWounds/Cluster-Analysis-Machine-Learning-for-Pairs-Trading"
+                class="btn-blue btn-small" target="_blank"> <i class="fab fa-github"></i> Code</a>
+                <button class="read-more-btn btn-blue-outline btn-small mx-1">Read More</button>
+
+            </div>
+          </div>
+        </div>
+
+        
+
+
+      </div>
 
     </div>
 
+    <button class="carousel-arrow right" aria-label="Scroll right">&#8594;</button>
 
 </section>
 
-
+<!-- Wave to white (Skills section background) -->
+<div class="section-wave">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-240 30-480 30-720 0S240 0 0 30V0z" fill="#fff"/></svg>
+</div>
 
   <!-- SKILLS -->
   <section id="skills" class="skills">
-    <div class="seperator-skew-top">
-      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
-        xmlns="http://www.w3.org/2000/svg">
-        <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-      </svg>
-    </div>
-
     <div class="container" data-aos="fade-in">
       <h2 class="text-white main-font">My <span class="text-blue main-font">Skills</span></h2>
       <ul id="skills-list" class="skills-icons">
@@ -454,6 +454,7 @@
 
   </section>
 
+
   <!-- influences -->
   <section id="influences" class="education">
 
@@ -502,34 +503,34 @@
 
       <body>
         <div class="row" data-aos="fade-up">
-          <div class="circle">
+          <div class="circle" data-aos="zoom-in" data-aos-delay="0">
             <img src="./img/heraclitus.webp" alt="Heraclitus" loading="lazy">
             <div class="name">Heraclitus</div>
             <div class="quote">"The only thing that is constant is change."</div>
           </div>
-          <div class="circle">
+          <div class="circle" data-aos="zoom-in" data-aos-delay="100">
             <img src="./img/carl_g_jung.webp" alt="Carl Gustav Jung" loading="lazy">
             <div class="name">Carl Gustav Jung</div>
             <div class="quote">"In all chaos there is a cosmos, in all disorder a secret order.
               "</div>
           </div>
-          <div class="circle">
+          <div class="circle" data-aos="zoom-in" data-aos-delay="200">
             <img src="./img/edmund_husserl.webp" alt="Edmund Husserl" loading="lazy">
             <div class="name">Edmund Husserl</div>
             <div class="quote">"Merely fact-minded sciences make merely fact-minded people."</div>
           </div>
-          <div class="circle">
+          <div class="circle" data-aos="zoom-in" data-aos-delay="300">
             <img src="./img/karl_jaspers.webp" alt="Karl Jaspers" loading="lazy">
             <div class="name">Karl Jaspers</div>
             <div class="quote">"Even truth can be deceptive, whatever its appearance."</div>
           </div>
-          <div class="circle">
+          <div class="circle" data-aos="zoom-in" data-aos-delay="400">
             <img src="./img/albert_n_whitehead.webp" alt="Albert North Whitehead" loading="lazy">
             <div class="name">Alfred North Whitehead</div>
             <div class="quote">"...the only simplicity to be trusted is the simplicity to be found on the far side of
               complexity."</div>
           </div>
-          <div class="circle">
+          <div class="circle" data-aos="zoom-in" data-aos-delay="500">
             <img src="./img/iain_mcgilchrist.webp" alt="Iain McGilchrist" loading="lazy">
             <div class="name">Iain McGilchrist</div>
             <div class="quote">"Meaning emerges from engagement with the world, not from abstract contemplation of it."
@@ -539,6 +540,10 @@
       </body>
   </section>
 
+<!-- Wave to white (Achievements section background) -->
+<div class="section-wave">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-240 30-480 30-720 0S240 0 0 30V0z" fill="#fff"/></svg>
+</div>
 
 <!-- Achievements -->
 <section id="certificates" class="achievements">
@@ -547,7 +552,7 @@
 
     <div class="achievements-grid" data-aos="fade-up">
 
-      <div class="achievement-card">
+      <div class="achievement-card" data-aos="fade-up" data-aos-delay="0">
         <h3>
           <a href="https://patents.google.com/patent/WO2024069292A1/en?oq=PCT%2fIB2023%2f058957" class="text-blue" target="_blank">
             Patent on modifying health and personalizing it based on music...
@@ -561,7 +566,7 @@
       </div>
 
 
-      <div class="achievement-card">
+      <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
         <h3>
           <a href="https://coursera.org/share/34fbf2bf1a4f336d9d8ea8ccd8b04b06" class="text-blue" target="_blank">
             Google Data Analytics Specialization
@@ -575,7 +580,7 @@
       </div>
 
 
-      <div class="achievement-card">
+      <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
         <h3>
           <a href="https://coursera.org/share/ef200c50887f8419e4dfbda8d3c04525" class="text-blue" target="_blank">
             Deep Learning Specialization
@@ -592,14 +597,17 @@
   </div>
 </section>
 
-
+<!-- Wave to light gray (Contact section background) -->
+<div class="section-wave">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v30c-240 30-480 30-720 0S240 0 0 30V0z" fill="#f7f9fa"/></svg>
+</div>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="container">
       <h2 class="section-title main-font" data-aos="fade-in">Contact <span class="text-blue main-font">Me</span></h2>
       <div class="card-container">
-        <div class="card" data-aos="fade-in">
+        <div class="card" data-aos="fade-in" data-aos-delay="0">
           <i class="fas fa-envelope"></i>
           <h3>Email</h3>
           <p>igorradovanovic20@gmail.com</p>
@@ -654,20 +662,34 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" style="background: #181c24; color: #fff; padding: 2.5rem 0 1.2rem 0;">
     <div class="container">
-      <div class="footer-flex">
-        <img src="./img/logo.webp" alt="logo" width="200" height="45" id=" logo-footer">
-        <p class="footer-description">Crafting innovative AI solutions and exploring the intersection of psychology and data science. Let's connect!</p>
-
-        <div class="footer-icon-links">
-          <a href="https://github.com/IgorWounds" aria-label="Visit IgorWounds GitHub profile." target="_blank"><i
-              class="fab fa-github fa-2x"></i></a>
-          <a href="https://www.linkedin.com/in/igor-radovanovic-profile" aria-label="Add Igor Radovanovic on LinkedIn"
-            target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-          <a href="mailto:igorradovanovic20@gmail.com" aria-label="Send Email to Igor Radovanovic."><i
-              class="fas fa-envelope fa-2x"></i></a>
+      <div class="footer-flex" style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 2rem;">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; min-width: 220px;">
+          <img src="./img/logo.webp" alt="logo" width="180" height="40" id="logo-footer">
+          <p class="footer-description" style="color: #cfd8dc; max-width: 320px; font-size: 1rem;">Crafting innovative sofotware. <br> Let's connect!</p>
         </div>
+        <nav style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 140px;">
+          <span style="font-weight: 600; color: #fff; margin-bottom: 0.5rem;">Quick Links</span>
+          <a href="#projects" style="color: #b0c4d6; text-decoration: none;">Projects</a>
+          <a href="#skills" style="color: #b0c4d6; text-decoration: none;">Skills</a>
+          <a href="#influences" style="color: #b0c4d6; text-decoration: none;">Influenced By</a>
+          <a href="#certificates" style="color: #b0c4d6; text-decoration: none;">Achievements</a>
+          <a href="#contact" style="color: #b0c4d6; text-decoration: none;">Contact</a>
+        </nav>
+        <div class="footer-icon-links" style="display: flex; flex-direction: column; gap: 0.7rem; min-width: 120px;">
+          <a href="https://github.com/IgorWounds" aria-label="Visit IgorWounds GitHub profile." target="_blank" style="color: #b0c4d6;"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://www.linkedin.com/in/igor-radovanovic-profile" aria-label="Add Igor Radovanovic on LinkedIn" target="_blank" style="color: #b0c4d6;"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="mailto:igorradovanovic20@gmail.com" aria-label="Send Email to Igor Radovanovic." style="color: #b0c4d6;"><i class="fas fa-envelope fa-2x"></i></a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #232733; margin: 2rem 0 1rem 0;"></div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.98rem; color: #b0c4d6;">
+        <span>&copy; Igor Radovanovic 2025. All rights reserved.</span>
+        <span>
+          <a href="privacy.html" style="color: #b0c4d6; text-decoration: underline; margin-right: 1.2rem;">Privacy Policy</a>
+          <a href="terms.html" style="color: #b0c4d6; text-decoration: underline;">Terms</a>
+        </span>
       </div>
     </div>
   </footer>
