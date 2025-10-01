@@ -6,3 +6,4 @@ temp/
 .kiro/
 .cursor/
 lighthouse*
+node_modules/
