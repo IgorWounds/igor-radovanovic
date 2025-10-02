@@ -657,7 +657,7 @@
                 </div>
                 <span
                   class="bg-yellow-400/10 text-yellow-300 px-3 py-1 rounded-full text-xs font-medium"
-                  >In Development</span
+                  ><a href="https://tapflowbjj.com" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors"></a>Try it out!</a></span
                 >
               </div>
               <p
@@ -1600,6 +1600,19 @@
           showMoreBtn.textContent = isShowingMore ? "Show More" : "Show Less";
         });
       });
+    </script>
+
+    <script>
+      (function() {
+        var script = document.createElement('script');
+        script.src = 'https://getinsights.io/js/insights.js';
+        script.async = true;
+        script.onload = function() {
+          insights.init('IuTASD6pVlnJRt6s');
+          insights.trackPages();
+        };
+        document.head.appendChild(script);
+      })();
     </script>
   </body>
 </html>
