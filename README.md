@@ -1,2 +1,3 @@
-# igor-radovanovic
-Igor Radovanovic - Personal Website
+# Igor Radovanovic's Website
+
+This is the source code for my personal website.
