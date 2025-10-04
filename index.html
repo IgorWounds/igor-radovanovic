@@ -2,7 +2,10 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Igor Radovanovic - Senior Engineer & TapFlow Creator</title>
     <meta
       name="description"
@@ -107,6 +110,9 @@
     <!-- Performance hints - only most critical -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://getinsights.io" />
 
     <!-- Preload critical resources -->
     <link rel="preload" href="/img/igor.avif" as="image" type="image/avif" />
@@ -152,8 +158,6 @@
       };
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
@@ -219,6 +223,34 @@
       @media (hover: none) {
         .cursor-spotlight {
           display: none;
+        }
+      }
+
+      /* Mobile performance optimizations */
+      @media (max-width: 768px) {
+        /* Reduce heavy animations on mobile */
+        .group:hover .group-hover\:scale-110 {
+          transform: scale(1.05) !important;
+        }
+        .group:hover .group-hover\:blur-2xl {
+          filter: blur(8px) !important;
+        }
+        .hover\:-translate-y-2:hover {
+          transform: translateY(-4px) !important;
+        }
+        .hover\:-translate-y-1:hover {
+          transform: translateY(-2px) !important;
+        }
+
+        /* Optimize transitions for mobile */
+        * {
+          transition-duration: 0.2s !important;
+        }
+
+        /* Reduce shadow complexity on mobile */
+        .shadow-2xl {
+          box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
         }
       }
       /* Animation for elements scrolling into view */
@@ -531,7 +563,7 @@
                     width="320"
                     height="320"
                     fetchpriority="high"
-                    sizes="(max-width: 768px) 256px, 320px"
+                    sizes="(max-width: 480px) 240px, (max-width: 768px) 280px, 320px"
                   />
 
                   <!-- Subtle overlay -->
@@ -573,8 +605,13 @@
             <div class="relative">
               <div class="flex items-start justify-between mb-6">
                 <div class="flex items-center space-x-4">
-                  <div class="text-accent text-3xl">
-                    <i class="fas fa-bolt"></i>
+                  <div class="w-12 h-12 flex items-center justify-center">
+                    <img
+                      src="/img/return_energy_logo.avif"
+                      alt="Return Energy Logo"
+                      class="w-full h-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                   <div>
                     <h3 class="text-xl font-bold text-slate-200">
@@ -647,8 +684,13 @@
             <div class="relative">
               <div class="flex items-start justify-between mb-6">
                 <div class="flex items-center space-x-4">
-                  <div class="text-accent text-3xl">
-                    <i class="fas fa-mobile-alt"></i>
+                  <div class="w-12 h-12 flex items-center justify-center">
+                    <img
+                      src="/img/tapflow_icon.avif"
+                      alt="TapFlow Logo"
+                      class="w-full h-full object-contain"
+                      loading="lazy"
+                    />
                   </div>
                   <div>
                     <h3 class="text-xl font-bold text-slate-200">TapFlow</h3>
@@ -657,7 +699,13 @@
                 </div>
                 <span
                   class="bg-yellow-400/10 text-yellow-300 px-3 py-1 rounded-full text-xs font-medium"
-                  ><a href="https://tapflowbjj.com" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors"></a>Try it out!</a></span
+                  ><a
+                    href="https://tapflowbjj.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-accent transition-colors"
+                    >Check it out!</a
+                  ></span
                 >
               </div>
               <p
@@ -1487,10 +1535,17 @@
         // --- Cursor Spotlight ---
         const spotlight = document.querySelector(".cursor-spotlight");
         if (window.matchMedia("(hover: hover)").matches) {
+          let mouseMoveThrottle = false;
           window.addEventListener("mousemove", (e) => {
-            spotlight.style.transform = `translate(${e.clientX - 16}px, ${
-              e.clientY - 16
-            }px)`;
+            if (!mouseMoveThrottle) {
+              requestAnimationFrame(() => {
+                spotlight.style.transform = `translate(${e.clientX - 16}px, ${
+                  e.clientY - 16
+                }px)`;
+                mouseMoveThrottle = false;
+              });
+              mouseMoveThrottle = true;
+            }
           });
         }
 
@@ -1534,20 +1589,27 @@
         const mobileNavLinks = document.querySelectorAll("#mobile-menu a");
 
         let lastScrollY = window.scrollY;
+        let scrollThrottle = false;
         window.addEventListener(
           "scroll",
           () => {
-            const currentScrollY = window.scrollY;
-            const isScrolled = currentScrollY > 50;
-            header.classList.toggle("glass-nav", isScrolled);
-            header.classList.toggle("shadow-lg", isScrolled);
+            if (!scrollThrottle) {
+              requestAnimationFrame(() => {
+                const currentScrollY = window.scrollY;
+                const isScrolled = currentScrollY > 50;
+                header.classList.toggle("glass-nav", isScrolled);
+                header.classList.toggle("shadow-lg", isScrolled);
 
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-              header.classList.add("-translate-y-full"); // Scrolling down
-            } else {
-              header.classList.remove("-translate-y-full"); // Scrolling up
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                  header.classList.add("-translate-y-full"); // Scrolling down
+                } else {
+                  header.classList.remove("-translate-y-full"); // Scrolling up
+                }
+                lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+                scrollThrottle = false;
+              });
+              scrollThrottle = true;
             }
-            lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
           },
           { passive: true }
         );
@@ -1603,12 +1665,12 @@
     </script>
 
     <script>
-      (function() {
-        var script = document.createElement('script');
-        script.src = 'https://getinsights.io/js/insights.js';
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://getinsights.io/js/insights.js";
         script.async = true;
-        script.onload = function() {
-          insights.init('IuTASD6pVlnJRt6s');
+        script.onload = function () {
+          insights.init("IuTASD6pVlnJRt6s");
           insights.trackPages();
         };
         document.head.appendChild(script);
