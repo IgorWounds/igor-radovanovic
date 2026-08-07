@@ -6,14 +6,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <title>Igor Radovanovic - Senior Engineer & TapFlow Creator</title>
+    <title>Igor Radovanovic - Engineer, Founder & Writer</title>
     <meta
       name="description"
-      content="Igor Radovanovic - Senior Data Platform Engineer, AI Engineer, and TapFlow Creator. Building scalable data platforms, innovative AI applications, and patented healthcare solutions."
+      content="Igor Radovanovic - Senior Data Platform Engineer, AI engineer, founder, and writer. Building trusted systems, applied AI products, and published creative work."
     />
     <meta
       name="keywords"
-      content="Igor Radovanovic, Senior Data Platform Engineer, AI Engineer, TapFlow, Data Science, Machine Learning, Python, AWS, Healthcare AI, Patent PCT/IB2023/058957"
+      content="Igor Radovanovic, Senior Data Platform Engineer, AI Engineer, TapFlow, The Sigh of Silence, Data Science, Machine Learning, Python, AWS, Healthcare AI, Patent PCT/IB2023/058957"
     />
     <meta name="author" content="Igor Radovanovic" />
     <meta name="robots" content="index, follow" />
@@ -27,11 +27,11 @@
     <meta property="og:url" content="https://igorradovanovic.com/" />
     <meta
       property="og:title"
-      content="Igor Radovanovic - Senior Engineer & TapFlow Creator"
+      content="Igor Radovanovic - Engineer, Founder & Writer"
     />
     <meta
       property="og:description"
-      content="Senior Data Platform Engineer, AI Engineer, and TapFlow Creator. Building scalable data platforms and innovative AI applications."
+      content="Senior Data Platform Engineer, AI engineer, founder, and author of The Sigh of Silence."
     />
     <meta
       property="og:image"
@@ -49,11 +49,11 @@
     <meta property="twitter:url" content="https://igorradovanovic.com/" />
     <meta
       property="twitter:title"
-      content="Igor Radovanovic - Senior Engineer & TapFlow Creator"
+      content="Igor Radovanovic - Engineer, Founder & Writer"
     />
     <meta
       property="twitter:description"
-      content="Senior Data Platform Engineer, AI Engineer, and TapFlow Creator. Building scalable data platforms and innovative AI applications."
+      content="Senior Data Platform Engineer, AI engineer, founder, and author of The Sigh of Silence."
     />
     <meta
       property="twitter:image"
@@ -74,7 +74,7 @@
         "@type": "Person",
         "name": "Igor Radovanovic",
         "jobTitle": "Senior Data Platform Engineer",
-        "description": "Senior Data Platform Engineer, AI Engineer, and TapFlow Creator. Building scalable data platforms and innovative AI applications.",
+        "description": "Senior Data Platform Engineer, AI engineer, founder, and author of The Sigh of Silence.",
         "url": "https://igorradovanovic.com",
         "image": "https://igorradovanovic.com/img/igor.avif",
         "email": "igorradovanovic20@gmail.com",
@@ -90,7 +90,8 @@
           "Python",
           "AWS",
           "Healthcare AI",
-          "Mobile App Development"
+          "Mobile App Development",
+          "Creative Writing"
         ],
         "hasOccupation": {
           "@type": "Occupation",
@@ -110,57 +111,16 @@
     <!-- Performance hints - only most critical -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
     <link rel="preconnect" href="https://getinsights.io" />
 
     <!-- Preload critical resources -->
     <link rel="preload" href="/img/igor.avif" as="image" type="image/avif" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Inter", "sans-serif"],
-              mono: [
-                '"SF Mono"',
-                '"Fira Code"',
-                '"Fira Mono"',
-                "Roboto Mono",
-                "monospace",
-              ],
-            },
-            colors: {
-              navy: {
-                950: "#020c1b",
-                900: "#0a192f",
-                800: "#112240",
-                700: "#172a45",
-              },
-              slate: {
-                400: "#8892b0",
-                300: "#a8b2d1",
-                200: "#ccd6f6",
-              },
-              accent: "#00f5c4",
-            },
-            boxShadow: {
-              glow: "0 0 15px 0px rgba(0, 245, 196, 0.3)",
-            },
-            transitionTimingFunction: {
-              "custom-ease": "cubic-bezier(0.645, 0.045, 0.355, 1)",
-            },
-          },
-        },
-      };
-    </script>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/styles.css" />
 
     <style>
       body {
@@ -181,7 +141,7 @@
       h1,
       h2,
       h3 {
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
       }
       p {
         line-height: 1.75;
@@ -287,6 +247,24 @@
       .section-panel {
         border-top: 1px solid rgba(23, 42, 69, 0.6);
       }
+      .portrait-frame {
+        border-radius: 8px;
+        clip-path: polygon(0 0, 100% 0, 100% 86%, 88% 100%, 0 100%);
+      }
+      .portrait-frame img {
+        object-position: 50% 28%;
+      }
+      .book-visual {
+        min-height: 26rem;
+        background-image:
+          linear-gradient(180deg, rgba(2, 12, 27, 0.12), rgba(2, 12, 27, 0.88)),
+          url("https://sighofsilence.com/images/mountain-hero.webp");
+        background-size: cover;
+        background-position: center;
+      }
+      .book-mark {
+        color: #d6b778;
+      }
       .icon {
         width: 1em;
         height: 1em;
@@ -303,6 +281,43 @@
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
           scroll-behavior: auto !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .book-visual {
+          min-height: 15rem;
+        }
+        main {
+          padding-left: 1.25rem !important;
+          padding-right: 1.25rem !important;
+        }
+        main > section {
+          padding-top: 4rem !important;
+          padding-bottom: 4rem !important;
+        }
+        #hero {
+          min-height: 86vh;
+        }
+        #about .space-y-6,
+        #skills .space-y-10 {
+          gap: 1rem;
+        }
+        #ventures .bg-navy-800,
+        #projects .bg-navy-800,
+        #influences .bg-navy-800,
+        #achievements .bg-navy-800,
+        #skills .bg-navy-800\/60 {
+          padding: 1.25rem !important;
+        }
+        #influences img {
+          width: 4.5rem;
+          height: 4.5rem;
+          margin-bottom: 1rem;
+        }
+        #influences blockquote,
+        #about p,
+        #contact p {
+          font-size: 1rem !important;
         }
       }
     </style>
@@ -395,14 +410,14 @@
             <a
               href="#ventures"
               class="nav-link transition-colors text-sm font-medium relative group text-slate-200 hover:text-accent"
-              >Ventures<span
+              >Current Work<span
                 class="absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 w-0 group-hover:w-full"
               ></span
             ></a>
             <a
               href="#projects"
               class="nav-link transition-colors text-sm font-medium relative group text-slate-200 hover:text-accent"
-              >Projects<span
+              >Selected Work<span
                 class="absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 w-0 group-hover:w-full"
               ></span
             ></a>
@@ -417,6 +432,13 @@
               href="#contact"
               class="nav-link transition-colors text-sm font-medium relative group text-slate-200 hover:text-accent"
               >Contact<span
+                class="absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 w-0 group-hover:w-full"
+              ></span
+            ></a>
+            <a
+              href="#book"
+              class="nav-link transition-colors text-sm font-medium relative group text-slate-200 hover:text-accent"
+              >Writing<span
                 class="absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 w-0 group-hover:w-full"
               ></span
             ></a>
@@ -459,12 +481,12 @@
           <a
             href="#ventures"
             class="nav-link transition-colors text-lg text-center font-medium text-slate-200 hover:text-accent"
-            >Ventures</a
+            >Current Work</a
           >
           <a
             href="#projects"
             class="nav-link transition-colors text-lg text-center font-medium text-slate-200 hover:text-accent"
-            >Projects</a
+            >Selected Work</a
           >
           <a
             href="#skills"
@@ -475,6 +497,11 @@
             href="#contact"
             class="nav-link transition-colors text-lg text-center font-medium text-slate-200 hover:text-accent"
             >Contact</a
+          >
+          <a
+            href="#book"
+            class="nav-link transition-colors text-lg text-center font-medium text-slate-200 hover:text-accent"
+            >Writing</a
           >
         </div>
       </div>
@@ -550,24 +577,24 @@
             class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display text-slate-200 mt-4"
             style="opacity: 0"
           >
-            Senior Data & AI Engineer
+            Engineer, founder, and writer
           </h1>
           <h2
             class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display text-slate-400 mt-2"
             style="opacity: 0"
           >
-            Building systems people can trust
+            Building systems people can trust.
           </h2>
           <p
             class="mt-6 max-w-xl text-lg text-slate-300 leading-relaxed"
             style="opacity: 0"
           >
-            I design scalable data platforms and AI products that ship reliably,
-            surface signal from noise, and translate complexity into clear
-            business outcomes.
+            I build data platforms and AI products for messy, real-world
+            problems. I like systems that are clear enough to trust, practical
+            enough to ship, and honest about the people they serve.
           </p>
 
-          <div class="mt-12" style="opacity: 0">
+          <div class="mt-10 flex flex-wrap gap-4" style="opacity: 0">
             <a
               href="#contact"
               class="bg-accent text-navy-900 px-9 py-4 rounded-md font-semibold text-lg hover:bg-accent/90 transition-colors duration-300 shadow-glow"
@@ -595,75 +622,60 @@
             class="space-y-6 text-lg text-slate-300 leading-relaxed order-2 lg:order-1"
           >
             <p>
-              My journey into technology began with a love for Data Science from
-              a young age. My background is in Psychology which gave me a unique
-              lens for problem-solving, teaching me to look beyond the data to
-              understand the human-side of every technical challenge. It allows
-              me to bridge the gap between complex systems and the people
-              they're built to serve.
+              I came into technology through data science and psychology. That
+              combination still shapes how I work: I care about the model, the
+              pipeline, and the person who has to make sense of the result.
             </p>
             <p>
-              As a leader, I'm passionate about fostering autonomous,
-              collaborative teams and building solutions that are not just
-              technically robust, but also elegant and meaningful.
+              As an engineer and lead, I like small teams with high trust,
+              direct communication, and enough technical depth to make hard
+              systems feel simple from the outside.
             </p>
             <p>
-              When not architecting data pipelines or fine-tuning models, you'll
-              find me on the mats training Brazilian Jiu-Jitsu - a discipline
-              that mirrors engineering in its blend of strategy and continuous
-              problem-solving - or lost in a book, exploring everything from
-              ancient philosophy to modern AI theory.
+              Outside work, Brazilian Jiu-Jitsu keeps me honest about practice,
+              feedback, and pressure. Books do something similar in a quieter
+              way: they give me room to think before turning thought into work.
             </p>
           </div>
           <div class="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div class="relative group">
-              <!-- Glow effect -->
+            <div class="relative group max-w-sm w-full">
               <div
-                class="absolute -inset-4 bg-gradient-to-r from-accent/20 via-accent/10 to-accent/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"
+                class="absolute -inset-4 bg-gradient-to-r from-accent/20 via-transparent to-accent/10 blur-xl group-hover:blur-2xl transition-all duration-500"
               ></div>
-
-              <!-- Main image container -->
-              <div class="relative">
-                <!-- Decorative border -->
-                <div
-                  class="absolute -inset-2 bg-gradient-to-r from-accent/30 via-transparent to-accent/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                ></div>
-
-                <!-- Image -->
-                <div
-                  class="relative w-80 h-80 rounded-full overflow-hidden border-4 border-accent/20 group-hover:border-accent/40 transition-all duration-500 shadow-2xl"
-                >
+              <div
+                class="relative bg-navy-800/60 border border-navy-700/70 p-3 shadow-2xl"
+                style="border-radius: 8px"
+              >
+                <div class="portrait-frame relative overflow-hidden">
                   <img
                     src="/img/igor.avif"
-                    alt="Igor Radovanovic - Senior Engineer & TapFlow Creator professional headshot"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Igor Radovanovic - senior engineer, founder, and writer"
+                    class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="eager"
-                    width="320"
-                    height="320"
+                    width="360"
+                    height="420"
                     fetchpriority="high"
-                    sizes="(max-width: 480px) 240px, (max-width: 768px) 280px, 320px"
+                    sizes="(max-width: 480px) 280px, (max-width: 768px) 320px, 360px"
                   />
-
-                  <!-- Subtle overlay -->
                   <div
-                    class="absolute inset-0 bg-gradient-to-t from-navy-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    class="absolute inset-0 bg-gradient-to-t from-navy-950/55 via-transparent to-transparent"
                   ></div>
                 </div>
-
-                <!-- Floating accent dots -->
                 <div
-                  class="absolute -top-2 -right-2 w-4 h-4 bg-accent rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500"
-                ></div>
-                <div
-                  class="absolute -bottom-2 -left-2 w-3 h-3 bg-accent/60 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-500"
-                ></div>
+                  class="flex items-center justify-between border-t border-navy-700/70 px-2 pt-4 mt-4"
+                >
+                  <span class="font-mono text-xs text-accent"
+                    >systems / practice / writing</span
+                  >
+                  <span class="h-2 w-2 bg-accent"></span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Ventures -->
+      <!-- Current Work -->
       <section
         id="ventures"
         class="py-24 animate-on-scroll section-visibility section-panel"
@@ -672,7 +684,7 @@
           <h2
             class="text-3xl md:text-4xl font-bold font-display text-slate-200"
           >
-            Current Ventures
+            Current Work
           </h2>
           <div class="h-0.5 bg-accent mt-3" style="width: 5rem"></div>
         </div>
@@ -707,10 +719,9 @@
               <p
                 class="text-slate-300 mb-6 text-base leading-relaxed group-hover:text-slate-200 transition-colors duration-300"
               >
-                Working on the architecture and development of scalable data
-                platforms that power renewable energy insights. Designing
-                systems that process massive datasets to optimize energy
-                distribution and sustainability metrics.
+                Building data platform foundations for renewable energy:
+                pipelines, models, and infrastructure that make operational
+                decisions easier to trust.
               </p>
               <div class="mb-6">
                 <h4 class="font-semibold text-slate-200 mb-3">Focus Areas</h4>
@@ -720,12 +731,12 @@
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
                   >
-                    Scalable data platform architecture and development
+                    Platform architecture for large operational datasets
                   </li>
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
                   >
-                    Renewable energy insights and optimization systems
+                    Analytics and optimization systems for energy operations
                   </li>
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
@@ -739,10 +750,10 @@
                   >Python</span
                 >
                 <span class="bg-navy-700 text-slate-300 px-3 py-1 rounded-full"
-                  >SQL</span
+                  >Go</span
                 >
                 <span class="bg-navy-700 text-slate-300 px-3 py-1 rounded-full"
-                  >AWS</span
+                  >GCP</span
                 >
                 <span class="bg-navy-700 text-slate-300 px-3 py-1 rounded-full"
                   >Dagster</span
@@ -792,9 +803,9 @@
               <p
                 class="text-slate-300 mb-6 text-base leading-relaxed group-hover:text-slate-200 transition-colors duration-300"
               >
-                A cross-platform BJJ training mobile app for brazilian-jiu-jitsu
-                practicioners and coaches. Bridging the gap between traditional
-                martial arts instruction and modern technology.
+                A cross-platform training app for Brazilian Jiu-Jitsu
+                practitioners and coaches, built around drills, progression, and
+                the realities of training on the mats.
               </p>
               <div class="mb-6">
                 <h4 class="font-semibold text-slate-200 mb-3">Focus Areas</h4>
@@ -804,12 +815,12 @@
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
                   >
-                    Comprehensive drill and technique library
+                    Drill and technique library
                   </li>
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
                   >
-                    Optimised for the mats
+                    Practice-first mobile experience
                   </li>
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
@@ -849,7 +860,7 @@
           <h2
             class="text-3xl md:text-4xl font-bold font-display text-slate-200"
           >
-            Technical Leadership
+            Selected Work
           </h2>
           <div class="h-0.5 bg-accent mt-3" style="width: 5rem"></div>
         </div>
@@ -900,10 +911,9 @@
               <p
                 class="text-slate-300 mb-5 text-base leading-relaxed group-hover:text-slate-200 transition-colors duration-300"
               >
-                Created modular courses covering various aspects of trading,
-                programming, cybersecurity, and more. Wrote and published
-                articles on various topics demonstrating my expertise in these
-                areas.
+                Wrote lessons and articles that helped developers understand
+                trading, programming, and security without hiding the hard parts
+                behind buzzwords.
               </p>
               <div class="flex-grow">
                 <ul
@@ -922,7 +932,7 @@
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
                   >
-                    Algorithmic Trading
+                    Algorithmic trading education
                   </li>
                 </ul>
               </div>
@@ -980,9 +990,9 @@
               <p
                 class="text-slate-300 mb-5 text-base leading-relaxed group-hover:text-slate-200 transition-colors duration-300"
               >
-                Proprietary AI-driven musical assessment tool achieving 80%
-                balanced accuracy, surpassing traditional healthcare screeners
-                across 15+ mental health conditions.
+                Built AI assessment infrastructure for music-based mental
+                health screening, including privacy-conscious deployments and
+                research workflows.
               </p>
               <div class="flex-grow">
                 <ul
@@ -991,7 +1001,7 @@
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
                   >
-                    Enhanced average accuracy above 80%
+                    Improved balanced accuracy above 80%
                   </li>
                   <li
                     class="flex items-start before:content-['▹'] before:text-accent before:mr-3 before:leading-6"
@@ -1061,9 +1071,9 @@
               <p
                 class="text-slate-300 mb-5 text-base leading-relaxed group-hover:text-slate-200 transition-colors duration-300"
               >
-                Led the development of the OpenBB open-source project and worked
-                on the OpenBB Workspace to solve complex financial workflows
-                using function calling, RAG, and an advanced agentic structure.
+                Led backend work across OpenBB and OpenBB Workspace, turning
+                complex financial workflows into agent-driven product
+                capabilities.
               </p>
               <div class="flex-grow">
                 <ul
@@ -1124,13 +1134,13 @@
           <h2
             class="text-3xl md:text-4xl font-bold font-display text-slate-200"
           >
-            My Skills
+            Core Capabilities
           </h2>
           <div class="h-0.5 bg-accent mt-3" style="width: 5rem"></div>
         </div>
         <div class="max-w-5xl mx-auto space-y-10 text-left">
           <div
-            class="bg-navy-800/60 border border-navy-700/70 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
+            class="bg-navy-800/60 border border-navy-700/70 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
           >
             <p class="text-sm uppercase tracking-[0.2em] text-slate-400 mb-4">
               Capabilities
@@ -1159,7 +1169,7 @@
             </div>
           </div>
           <div
-            class="bg-navy-800/60 border border-navy-700/70 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
+            class="bg-navy-800/60 border border-navy-700/70 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
           >
             <p class="text-sm uppercase tracking-[0.2em] text-slate-400 mb-4">
               Languages & Frameworks
@@ -1196,7 +1206,7 @@
             </div>
           </div>
           <div
-            class="bg-navy-800/60 border border-navy-700/70 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
+            class="bg-navy-800/60 border border-navy-700/70 rounded-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
           >
             <p class="text-sm uppercase tracking-[0.2em] text-slate-400 mb-4">
               Cloud & Infrastructure
@@ -1241,9 +1251,9 @@
             </div>
           </div>
           <p class="text-sm text-slate-400 max-w-3xl">
-            This is a curated snapshot, not an exhaustive list. I’m an
-            everything engineer who adapts fast, picks the right tools for the
-            problem, and ships.
+            This is a working snapshot, not a full inventory. I care less about
+            tool lists than choosing the right level of simplicity for the
+            problem in front of me.
           </p>
         </div>
       </section>
@@ -1257,7 +1267,7 @@
           <h2
             class="text-3xl md:text-4xl font-bold font-display text-slate-200"
           >
-            Influenced By
+            Principles
           </h2>
           <div class="h-0.5 bg-accent mt-3" style="width: 5rem"></div>
         </div>
@@ -1386,7 +1396,7 @@
           <h2
             class="text-3xl md:text-4xl font-bold font-display text-slate-200"
           >
-            Achievements & Certifications
+            Credentials
           </h2>
           <div class="h-0.5 bg-accent mt-3" style="width: 5rem"></div>
         </div>
@@ -1538,16 +1548,112 @@
           Let's Build Together
         </h2>
         <p class="text-slate-300 mb-10 leading-relaxed text-lg">
-          I'm always open to discussing new projects, creative ideas, or
-          opportunities to be part of an ambitious vision. If you're looking for
-          a dedicated engineer who bridges deep technical expertise with
-          strategic thinking, I'd love to connect.
+          I’m open to ambitious engineering work, product ideas, and thoughtful
+          collaborations. If you need someone who can move between architecture,
+          implementation, and product judgment, let’s talk.
         </p>
         <a
           href="mailto:igorradovanovic20@gmail.com"
           class="border-2 border-accent text-accent px-8 py-4 rounded-md font-semibold text-lg hover:bg-accent/10 transition-colors duration-300 hover:shadow-glow"
           >Say Hello</a
         >
+      </section>
+
+      <!-- Writing -->
+      <section
+        id="book"
+        class="py-24 animate-on-scroll section-visibility section-panel"
+      >
+        <div class="flex flex-col items-center text-center mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold font-display text-slate-200"
+          >
+            Selected Writing
+          </h2>
+          <div class="h-0.5 bg-accent mt-3" style="width: 5rem"></div>
+        </div>
+        <div
+          class="grid lg:grid-cols-[0.85fr_1.15fr] gap-0 border border-navy-700/70 bg-navy-800/60"
+        >
+          <div
+            class="book-visual relative overflow-hidden"
+            aria-hidden="true"
+          ></div>
+          <div class="p-7 md:p-10 flex flex-col justify-center">
+            <p class="font-mono text-sm text-accent mb-4">Published Book</p>
+            <h3
+              class="text-2xl md:text-3xl font-bold font-display text-slate-200 mb-3"
+            >
+              The Sigh of Silence
+            </h3>
+            <p class="text-slate-300 font-medium mb-5">Igor Radovanovic</p>
+            <p class="text-slate-300 leading-relaxed mb-5">
+              A published collection of philosophical fragments on solitude,
+              time, the body, silence, and attention.
+            </p>
+            <p class="text-slate-300 leading-relaxed mb-8">
+              Writing is part of how I think through complex systems: slowly,
+              precisely, and with respect for what cannot be reduced to a
+              metric.
+            </p>
+            <div class="grid sm:grid-cols-3 gap-3 mb-7">
+              <a
+                href="https://www.sighofsilence.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-navy-700/70 p-4 hover:border-accent/50 hover:bg-accent/5 transition-colors"
+              >
+                <span class="font-mono text-xs book-mark">01</span>
+                <span class="block mt-2 text-slate-200 font-semibold"
+                  >Beginning</span
+                >
+              </a>
+              <a
+                href="https://www.sighofsilence.com/foreword/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-navy-700/70 p-4 hover:border-accent/50 hover:bg-accent/5 transition-colors"
+              >
+                <span class="font-mono text-xs book-mark">02</span>
+                <span class="block mt-2 text-slate-200 font-semibold"
+                  >Foreword</span
+                >
+              </a>
+              <a
+                href="https://www.sighofsilence.com/read/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-navy-700/70 p-4 hover:border-accent/50 hover:bg-accent/5 transition-colors"
+              >
+                <span class="font-mono text-xs book-mark">03</span>
+                <span class="block mt-2 text-slate-200 font-semibold"
+                  >Fragments</span
+                >
+              </a>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="https://www.sighofsilence.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center border border-accent text-accent px-7 py-3 rounded-md font-semibold hover:bg-accent/10 transition-colors duration-300"
+              >
+                Visit Website
+                <svg class="icon ml-2" aria-hidden="true">
+                  <use href="#icon-external"></use>
+                </svg>
+              </a>
+              <a
+                href="https://uzdahtisine.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center border border-navy-700 text-slate-200 px-7 py-3 rounded-md font-semibold hover:border-accent/60 hover:text-accent transition-colors duration-300"
+              >
+                Serbian Edition
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -1566,14 +1672,14 @@
             <a
               href="#ventures"
               class="text-slate-400 hover:text-accent transition-colors duration-300"
-              >Ventures</a
+              >Current Work</a
             >
           </li>
           <li>
             <a
               href="#projects"
               class="text-slate-400 hover:text-accent transition-colors duration-300"
-              >Projects</a
+              >Selected Work</a
             >
           </li>
           <li>
@@ -1588,6 +1694,13 @@
               href="#contact"
               class="text-slate-400 hover:text-accent transition-colors duration-300"
               >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="#book"
+              class="text-slate-400 hover:text-accent transition-colors duration-300"
+              >Writing</a
             >
           </li>
         </ul>
